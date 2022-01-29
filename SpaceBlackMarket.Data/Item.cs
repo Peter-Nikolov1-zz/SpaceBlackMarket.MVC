@@ -22,33 +22,29 @@ namespace SpaceBlackMarket.Data
         public int ItemId { get; set; }
 
         [Required]
-        [Display(Name = "Whats it called?")]
+
         public string ItemName { get; set; }
 
         [Required]
         public int ItemPrice { get; set; }
 
         [Required]
-        [Display(Name = "Provide Details")]
+
         public string ItemDescription { get; set; }
 
         [Required]
         public ItemType ItemType { get; set; }
 
         [Required]
-        [Display(Name = "How many?")]
-        public int Quantity { get; set; }
 
-        [Required]
-        [Display(Name = "Be prepared to travel for this item.")]
         public bool SmuggleDelivery { get; set; }
 
         [ForeignKey(nameof(Outpost))] // I want to know what items an Outpost has
         public int? OutpostId { get; set; }
         public virtual Outpost Outpost { get; set; }
 
-        [ForeignKey(nameof(SpacePirateId))] // I want to know what items a pirate has on their profile
-        public int SpacePirateId { get; set; }
-        public virtual SpacePirateProfile SpacePirateProfile { get; set; }
+        [ForeignKey(nameof(SpaceTravelerProfile))] // I want to know what items a pirate has on their profile
+        public int SpaceTravelerId { get; set; }
+        public virtual SpaceTravelerProfile SpaceTravelerProfile { get; set; }
     }
 }

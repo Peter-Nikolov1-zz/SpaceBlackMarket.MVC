@@ -60,5 +60,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ItemModels\" />
+    <Folder Include="OutpostModels\" />
+    <Folder Include="SpacePirateModels\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

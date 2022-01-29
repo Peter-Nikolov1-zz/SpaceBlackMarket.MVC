@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using SpaceBlackMarket.Data;
 
 namespace SpaceBlackMarketMVC.Data
 {
@@ -34,7 +35,7 @@ namespace SpaceBlackMarketMVC.Data
 
         public DbSet<Outpost> Outposts { get; set; }
         public DbSet<Item> Items { get; set; }
-        public DbSet<SpacePirateProfile> SpacePirateProfile { get; set; }
+        public DbSet<SpaceTravelerProfile> SpaceTravelerProfile { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
