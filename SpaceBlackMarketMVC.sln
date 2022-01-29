@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBlackMarketMVC", "SpaceBlackMarketMVC\SpaceBlackMarketMVC.csproj", "{FE4E2679-8D47-41CB-89FA-B0816FB9D85D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBlackMarket.Data", "SpaceBlackMarket.Data\SpaceBlackMarket.Data.csproj", "{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBlackMarket.Models", "SpaceBlackMarket.Models\SpaceBlackMarket.Models.csproj", "{282901F2-8229-41B7-A125-11BE6E712666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBlackMarket.Services", "SpaceBlackMarket.Services\SpaceBlackMarket.Services.csproj", "{62C73735-95F5-4A32-BF67-061E63C422D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE4E2679-8D47-41CB-89FA-B0816FB9D85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4E2679-8D47-41CB-89FA-B0816FB9D85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE4E2679-8D47-41CB-89FA-B0816FB9D85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE4E2679-8D47-41CB-89FA-B0816FB9D85D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282901F2-8229-41B7-A125-11BE6E712666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282901F2-8229-41B7-A125-11BE6E712666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282901F2-8229-41B7-A125-11BE6E712666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282901F2-8229-41B7-A125-11BE6E712666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C73735-95F5-4A32-BF67-061E63C422D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C73735-95F5-4A32-BF67-061E63C422D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C73735-95F5-4A32-BF67-061E63C422D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C73735-95F5-4A32-BF67-061E63C422D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6F41A7D-61D8-4E0A-BD30-53CFCE0BFA87}
+	EndGlobalSection
+EndGlobal

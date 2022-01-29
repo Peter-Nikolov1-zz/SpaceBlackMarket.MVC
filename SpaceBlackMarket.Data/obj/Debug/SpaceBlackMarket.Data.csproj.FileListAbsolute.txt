@@ -1,0 +1,16 @@
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.AssemblyReference.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.CoreCompileInputs.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\SpaceBlackMarket.Data.dll.config
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\SpaceBlackMarket.Data.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\SpaceBlackMarket.Data.pdb
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\EntityFramework.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\EntityFramework.xml
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.CopyComplete
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.pdb
