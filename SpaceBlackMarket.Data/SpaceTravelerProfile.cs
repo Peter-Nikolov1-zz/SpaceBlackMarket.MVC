@@ -13,14 +13,15 @@ namespace SpaceBlackMarket.Data
         public int SpaceTravelerId { get; set; }
 
         [Required]
+        public Guid TravelerId { get; set; }
 
-        public string PirateAlias { get; set; }
+        [Required]
+        public string TravelerAlias { get; set; }
 
         [Required]
         public double Credits { get; set; }
 
         [Required]
-
         public string WantedLevel { get; set; }
 
         public bool WillingToCooperate { get; set; }
