@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceBlackMarket.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,10 +16,8 @@ namespace SpaceBlackMarket.Models.ItemModels
         [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
-        [Display(Name = "Description of Item")]
-        public string ItemDescription { get; set; }
+        [Display(Name = "Item Type")]
+        public ItemType ItemType { get; set; }
 
-        [Display(Name = "Item Price")]
-        public int ItemPrice { get; set; }
     }
 }

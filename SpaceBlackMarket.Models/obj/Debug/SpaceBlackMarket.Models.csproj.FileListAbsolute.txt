@@ -14,3 +14,6 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Mo
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.csproj.CopyComplete
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\SpaceBlackMarket.Data.dll
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\SpaceBlackMarket.Data.pdb
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\SpaceBlackMarket.Data.dll.config

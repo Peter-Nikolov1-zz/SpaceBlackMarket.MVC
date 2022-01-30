@@ -54,7 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemModels\ItemCreate.cs" />
     <Compile Include="ItemModels\ItemsList.cs" />
+    <Compile Include="OutpostModels\OutpostList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,8 +64,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="OutpostModels\" />
     <Folder Include="SpacePirateModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceBlackMarket.Data\SpaceBlackMarket.Data.csproj">
+      <Project>{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}</Project>
+      <Name>SpaceBlackMarket.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
