@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceBlackMarket.Data\SpaceBlackMarket.Data.csproj">
+      <Project>{030a68e5-0a58-4b6e-acb2-127cf1c871b9}</Project>
+      <Name>SpaceBlackMarket.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceBlackMarket.Models\SpaceBlackMarket.Models.csproj">
+      <Project>{282901f2-8229-41b7-a125-11be6e712666}</Project>
+      <Name>SpaceBlackMarket.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,7 +26,7 @@ namespace SpaceBlackMarket.Data
         public string ItemName { get; set; }
 
         [Required]
-        public int ItemPrice { get; set; }
+        public double ItemPrice { get; set; }
 
         [Required]
 
@@ -44,7 +44,7 @@ namespace SpaceBlackMarket.Data
         public virtual Outpost Outpost { get; set; }
 
         [ForeignKey(nameof(SpaceTravelerProfile))] // I want to know what items a pirate has on their profile
-        public int SpaceTravelerId { get; set; }
+        public Guid TravelerId { get; set; }
         public virtual SpaceTravelerProfile SpaceTravelerProfile { get; set; }
     }
 }
