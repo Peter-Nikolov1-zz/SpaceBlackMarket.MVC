@@ -16,5 +16,24 @@ namespace SpaceBlackMarketMVC.Controllers
             var model = new OutpostList[0];
             return View(model);
         }
+
+        // GET
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(OutpostList model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
+        
     }
 }

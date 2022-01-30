@@ -9,15 +9,13 @@ namespace SpaceBlackMarket.Models.OutpostModels
 {
     public class OutpostList
     {
-        public int OutpostId { get; set; }
-
         [Display(Name = "Outpost Name")]
         public string OutpostName { get; set; }
 
         [Display(Name = "Galaxy Name")]
         public string GalaxyName { get; set; }
 
-        [Display(Name = "System Coords")]
+        [Display(Name = "System Coordinates")]
         public string SystemCoordinates { get; set; }
 
         [Display(Name = "Danger Level")]

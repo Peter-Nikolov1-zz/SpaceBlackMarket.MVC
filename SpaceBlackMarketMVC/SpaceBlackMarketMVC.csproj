@@ -240,10 +240,11 @@
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Item\Create.cshtml" />
     <Content Include="Views\Outpost\Index.cshtml" />
+    <Content Include="Views\Outpost\Create.cshtml" />
+    <Content Include="Views\SpaceTraveler\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SpaceTraveler\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

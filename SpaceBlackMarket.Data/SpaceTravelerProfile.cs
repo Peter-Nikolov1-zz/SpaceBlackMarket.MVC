@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 
 namespace SpaceBlackMarket.Data
 {
+    public enum WantedLevel
+    {
+        GalacticFedsWantThem,
+        HighlyDesired,
+        TheyOweSomeTime,
+        TheyStoleCandy,
+    }
+
     public class SpaceTravelerProfile
     {
         [Key]
@@ -22,7 +30,7 @@ namespace SpaceBlackMarket.Data
         public double Credits { get; set; }
 
         [Required]
-        public string WantedLevel { get; set; }
+        public WantedLevel WantedLevel { get; set; }
 
         public bool WillingToCooperate { get; set; }
 

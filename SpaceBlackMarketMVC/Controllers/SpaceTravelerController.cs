@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceBlackMarket.Models.SpacePirateModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,13 @@ namespace SpaceBlackMarketMVC.Controllers
     {
         // GET: SpaceTraveler
         public ActionResult Index()
+        {
+            var model = new SpaceTravelerList();
+            return View(model);
+        }
+
+        // GET
+        public ActionResult Create()
         {
             return View();
         }

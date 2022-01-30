@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SpaceBlackMarket.Models.ItemModels.ItemsList>
+﻿@model IEnumerable<SpaceBlackMarket.Models.SpacePirateModels.SpaceTravelerList>
 
 @{
     ViewBag.Title = "Index";
@@ -12,26 +12,27 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ItemName)
+            @Html.DisplayNameFor(model => model.TravelerAlias)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ItemType)
+            @Html.DisplayNameFor(model => model.WantedLevel)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ItemDescription)
+            @Html.DisplayNameFor(model => model.WillingToCooperate)
         </th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ItemName)
+            @Html.DisplayFor(modelItem => item.TravelerAlias)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ItemType)
+            @Html.DisplayFor(modelItem => item.WantedLevel)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ItemDescription)
+            @Html.DisplayFor(modelItem => item.WillingToCooperate)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
