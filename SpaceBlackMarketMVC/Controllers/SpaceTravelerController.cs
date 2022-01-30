@@ -1,4 +1,4 @@
-﻿using SpaceBlackMarket.Models.SpacePirateModels;
+﻿using SpaceBlackMarket.Models.SpaceTravelerModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace SpaceBlackMarketMVC.Controllers
         // GET: SpaceTraveler
         public ActionResult Index()
         {
-            var model = new SpaceTravelerList();
+            var model = new SpaceTravelerList[0];
             return View(model);
         }
 
@@ -21,5 +21,19 @@ namespace SpaceBlackMarketMVC.Controllers
         {
             return View();
         }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(SpaceTravelerCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+                
+            }
+            return View(model);
+        }
+
+        
     }
 }

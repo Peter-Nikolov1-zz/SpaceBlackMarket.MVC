@@ -242,6 +242,7 @@
     <Content Include="Views\Outpost\Index.cshtml" />
     <Content Include="Views\Outpost\Create.cshtml" />
     <Content Include="Views\SpaceTraveler\Index.cshtml" />
+    <Content Include="Views\SpaceTraveler\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

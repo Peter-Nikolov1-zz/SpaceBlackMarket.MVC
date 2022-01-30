@@ -12,7 +12,7 @@ namespace SpaceBlackMarket.Data
         GalacticFedsWantThem,
         HighlyDesired,
         TheyOweSomeTime,
-        TheyStoleCandy,
+        TheyStoleCandyFromABaby,
     }
 
     public class SpaceTravelerProfile

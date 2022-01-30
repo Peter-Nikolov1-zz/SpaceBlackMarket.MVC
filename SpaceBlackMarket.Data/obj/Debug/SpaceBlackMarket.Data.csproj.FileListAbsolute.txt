@@ -19,3 +19,4 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Da
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.FirstMigration.resources
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.RenamedSpacePirateToTraveler.resources
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.AddedGUIDTravelerId.resources
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.AddedSpaceTravelerViews.resources

@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202201292212558_AddedGUIDTravelerId.Designer.cs">
       <DependentUpon>202201292212558_AddedGUIDTravelerId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201300235450_AddedSpaceTravelerViews.cs" />
+    <Compile Include="Migrations\202201300235450_AddedSpaceTravelerViews.Designer.cs">
+      <DependentUpon>202201300235450_AddedSpaceTravelerViews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201292212558_AddedGUIDTravelerId.resx">
       <DependentUpon>202201292212558_AddedGUIDTravelerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201300235450_AddedSpaceTravelerViews.resx">
+      <DependentUpon>202201300235450_AddedSpaceTravelerViews.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
