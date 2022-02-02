@@ -44,7 +44,7 @@ namespace SpaceBlackMarket.Data
         public virtual Outpost Outpost { get; set; }
 
         [ForeignKey(nameof(SpaceTravelerProfile))] // I want to know what items a pirate has on their profile
-        public Guid TravelerId { get; set; }
+        public int SpaceTravelerProfileId { get; set; }
         public virtual SpaceTravelerProfile SpaceTravelerProfile { get; set; }
     }
 }

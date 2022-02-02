@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,10 @@ namespace SpaceBlackMarket.Data
     public class SpaceTravelerProfile
     {
         [Key]
-        public int SpaceTravelerId { get; set; }
+        public int SpaceTravelerProfileId { get; set; }
 
         [Required]
-        public Guid TravelerId { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Required]
         public string TravelerAlias { get; set; }
@@ -33,6 +34,5 @@ namespace SpaceBlackMarket.Data
         public WantedLevel WantedLevel { get; set; }
 
         public bool WillingToCooperate { get; set; }
-
     }
 }

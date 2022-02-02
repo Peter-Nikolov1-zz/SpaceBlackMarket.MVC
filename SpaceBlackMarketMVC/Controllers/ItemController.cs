@@ -1,4 +1,6 @@
-﻿using SpaceBlackMarket.Models.ItemModels;
+﻿using Microsoft.AspNet.Identity;
+using SpaceBlackMarket.Models.ItemModels;
+using SpaceBlackMarket.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace SpaceBlackMarketMVC.Controllers
         // GET: Item
         public ActionResult Index()
         {
-            var model = new ItemsList[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ItemService(userId);
+            var model = service.GetItems();
+
             return View(model);
         }
         
@@ -28,11 +33,26 @@ namespace SpaceBlackMarketMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ItemCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
 
-            }
+            var service = CreateItemService();
+
+            if (service.CreateItem(model))
+            {
+                TempData["SaveResult"] = "Your item was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Item could not be created.");
+
             return View(model);
+        }
+
+        private ItemService CreateItemService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ItemService(userId);
+            return service;
         }
     }
 }

@@ -1,5 +1,3 @@
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.AssemblyReference.cache
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\SpaceBlackMarket.Data.dll.config
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\SpaceBlackMarket.Data.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\SpaceBlackMarket.Data.pdb
@@ -11,12 +9,7 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Da
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.CopyComplete
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.pdb
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.InitialCreate.resources
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.GenerateResource.cache
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.FirstMigration.resources
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.RenamedSpacePirateToTraveler.resources
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.AddedGUIDTravelerId.resources
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.AddedSpaceTravelerViews.resources

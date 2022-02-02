@@ -56,27 +56,6 @@
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Migrations\202201292140134_InitialCreate.cs" />
-    <Compile Include="Migrations\202201292140134_InitialCreate.Designer.cs">
-      <DependentUpon>202201292140134_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201292157299_FirstMigration.cs" />
-    <Compile Include="Migrations\202201292157299_FirstMigration.Designer.cs">
-      <DependentUpon>202201292157299_FirstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201292205351_RenamedSpacePirateToTraveler.cs" />
-    <Compile Include="Migrations\202201292205351_RenamedSpacePirateToTraveler.Designer.cs">
-      <DependentUpon>202201292205351_RenamedSpacePirateToTraveler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201292212558_AddedGUIDTravelerId.cs" />
-    <Compile Include="Migrations\202201292212558_AddedGUIDTravelerId.Designer.cs">
-      <DependentUpon>202201292212558_AddedGUIDTravelerId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201300235450_AddedSpaceTravelerViews.cs" />
-    <Compile Include="Migrations\202201300235450_AddedSpaceTravelerViews.Designer.cs">
-      <DependentUpon>202201300235450_AddedSpaceTravelerViews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceTravelerProfile.cs" />
@@ -84,23 +63,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202201292140134_InitialCreate.resx">
-      <DependentUpon>202201292140134_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201292157299_FirstMigration.resx">
-      <DependentUpon>202201292157299_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201292205351_RenamedSpacePirateToTraveler.resx">
-      <DependentUpon>202201292205351_RenamedSpacePirateToTraveler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201292212558_AddedGUIDTravelerId.resx">
-      <DependentUpon>202201292212558_AddedGUIDTravelerId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201300235450_AddedSpaceTravelerViews.resx">
-      <DependentUpon>202201300235450_AddedSpaceTravelerViews.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

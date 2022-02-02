@@ -11,6 +11,9 @@ namespace SpaceBlackMarket.Models.ItemModels
     public class ItemCreate
     {
         [Required]
+        public int SpaceTravelerProfileId { get; set; }
+
+        [Required]
         [MinLength(2, ErrorMessage = "Please enter a longer name.")]
         [MaxLength(20, ErrorMessage = "There's no way its that long of a name...")]
         [Display(Name = "What is this item called?")]

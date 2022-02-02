@@ -11,11 +11,11 @@ namespace SpaceBlackMarket.Services
 {
     public class ItemService
     {
-        private readonly Guid _travelerId;
+        private readonly Guid _userId;
 
-        public ItemService(Guid travlelerId)
+        public ItemService(Guid ownerId)
         {
-            _travelerId = travlelerId;
+            _userId = ownerId;
         }
 
         public bool CreateItem(ItemCreate model)
@@ -23,14 +23,14 @@ namespace SpaceBlackMarket.Services
             var entity =
                 new Item()
                 {
-                    TravelerId = _travelerId,
+                    SpaceTravelerProfileId = model.SpaceTravelerProfileId,
                     ItemName = model.Name,
                     ItemPrice = model.Price,
                     ItemDescription = model.Description,
                     ItemType = model.Type
                 };
-            
-            using(var ctx = new ApplicationDbContext())
+
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.Items.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -39,25 +39,24 @@ namespace SpaceBlackMarket.Services
 
         public IEnumerable<ItemsList> GetItems()
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var query =
-                    ctx
-                        .Items
-                        .Where(e => e.TravelerId == _travelerId)
-                        .Select(
-                            e =>
-                                new ItemsList
-                                {
-                                    ItemName = e.ItemName,
-                                    ItemType = e.ItemType,
-                                    ItemDescription = e.ItemDescription
-                                }
-                        );
+                     ctx
+                         .Items
+                         .Select(
+                             e =>
+                                 new ItemsList
+                                 {
+                                     ItemName = e.ItemName,
+                                     ItemType = e.ItemType,
+                                     ItemDescription = e.ItemDescription
+                                 }
+                         );
 
                 return query.ToArray();
             }
         }
-        
+
     }
 }

@@ -1,5 +1,3 @@
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.csproj.AssemblyReference.cache
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\bin\SpaceBlackMarketMVC.dll.config
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\bin\SpaceBlackMarketMVC.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\bin\SpaceBlackMarketMVC.pdb
@@ -112,6 +110,8 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.csproj.AssemblyReference.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.csproj.CopyComplete
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarketMVC\obj\Debug\SpaceBlackMarketMVC.pdb
