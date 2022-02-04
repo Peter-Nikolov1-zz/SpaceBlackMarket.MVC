@@ -43,7 +43,11 @@ namespace SpaceBlackMarketMVC.Controllers
             ModelState.AddModelError("", "Outpost could not be created.");
 
             return View(model);
+        }
 
+        public ActionResult Details(int id)
+        {
+            var svc = ();
         }
         
     }
