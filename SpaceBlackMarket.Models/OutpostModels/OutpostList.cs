@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceBlackMarket.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace SpaceBlackMarket.Models.OutpostModels
         public string SystemCoordinates { get; set; }
 
         [Display(Name = "Danger Level")]
-        public int DangerLevel { get; set; } // Associate with string... 1 = "Not Terribly Dangerous" ... 5 = "DO NOT COME WITHOUT A WEAPON"
+        public DangerLevel DangerLevel { get; set; } // Associate with string... 1 = "Not Terribly Dangerous" ... 5 = "DO NOT COME WITHOUT A WEAPON"
 
     }
 }

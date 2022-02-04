@@ -8,6 +8,14 @@ using System.Threading.Tasks;
 
 namespace SpaceBlackMarket.Data
 {
+    public enum DangerLevel
+    {
+        CRITICAL,
+        High,
+        Medium,
+        Low,
+    }
+
     public class Outpost
     {
         [Key]
@@ -27,7 +35,7 @@ namespace SpaceBlackMarket.Data
 
         [Required]
 
-        public int DangerLevel { get; set; } // Is it a risky trek? Who knows... should probably bring a weapon.
+        public DangerLevel DangerLevel { get; set; } // Is it a risky trek? Who knows... should probably bring a weapon.
 
     }
 }

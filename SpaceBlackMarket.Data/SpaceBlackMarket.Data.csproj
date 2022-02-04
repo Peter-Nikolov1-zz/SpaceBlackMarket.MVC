@@ -56,6 +56,23 @@
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Migrations\202202020117402_InitialCreate.cs" />
+    <Compile Include="Migrations\202202020117402_InitialCreate.Designer.cs">
+      <DependentUpon>202202020117402_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202020149236_FirstMigration.cs" />
+    <Compile Include="Migrations\202202020149236_FirstMigration.Designer.cs">
+      <DependentUpon>202202020149236_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202040013383_SpaceTravelerIsNowNullable.cs" />
+    <Compile Include="Migrations\202202040013383_SpaceTravelerIsNowNullable.Designer.cs">
+      <DependentUpon>202202040013383_SpaceTravelerIsNowNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202040124240_DangerLevelIsEnum.cs" />
+    <Compile Include="Migrations\202202040124240_DangerLevelIsEnum.Designer.cs">
+      <DependentUpon>202202040124240_DangerLevelIsEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceTravelerProfile.cs" />
@@ -63,6 +80,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202202020117402_InitialCreate.resx">
+      <DependentUpon>202202020117402_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202020149236_FirstMigration.resx">
+      <DependentUpon>202202020149236_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202040013383_SpaceTravelerIsNowNullable.resx">
+      <DependentUpon>202202040013383_SpaceTravelerIsNowNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202040124240_DangerLevelIsEnum.resx">
+      <DependentUpon>202202040124240_DangerLevelIsEnum.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

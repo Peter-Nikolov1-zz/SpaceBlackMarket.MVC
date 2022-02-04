@@ -9,37 +9,53 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpaceTravelerProfileId)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.TravelerAlias)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.WantedLevel)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.WillingToCooperate)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.WantedLevel)
+        </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TravelerAlias)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WantedLevel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WillingToCooperate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpaceTravelerProfileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TravelerAlias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WillingToCooperate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WantedLevel)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
 
 </table>

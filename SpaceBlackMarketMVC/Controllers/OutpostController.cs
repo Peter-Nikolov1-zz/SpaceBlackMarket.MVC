@@ -1,4 +1,5 @@
 ﻿using SpaceBlackMarket.Models.OutpostModels;
+using SpaceBlackMarket.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace SpaceBlackMarketMVC.Controllers
         // GET: Outpost
         public ActionResult Index()
         {
-            var model = new OutpostList[0];
+            var service = new OutpostService();
+            var model = service.GetOutposts();
             return View(model);
         }
 
@@ -26,13 +28,22 @@ namespace SpaceBlackMarketMVC.Controllers
         // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(OutpostList model)
+        public ActionResult Create(OutpostCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
 
-            }
+            var service = new OutpostService();
+
+            if (service.CreateOutpost(model))
+            {
+                TempData["SaveResult"] = "Outpost Created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Outpost could not be created.");
+
             return View(model);
+
         }
         
     }

@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ItemService.cs" />
+    <Compile Include="OutpostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpaceTravelerProfileService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

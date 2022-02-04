@@ -10,7 +10,7 @@ namespace SpaceBlackMarket.Models.ItemModels
 {
     public class ItemCreate
     {
-        [Required]
+        [Display(Name = "Who is making this?")]
         public int SpaceTravelerProfileId { get; set; }
 
         [Required]
@@ -30,7 +30,7 @@ namespace SpaceBlackMarket.Models.ItemModels
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "How many credits?")]
+        [Display(Name = "Credit Cost:")]
         public double Price { get; set; }
     }
 }
