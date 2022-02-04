@@ -48,6 +48,14 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateItemService();
+            var model = svc.GetItemById(id);
+
+            return View(model);
+        }
+
         private ItemService CreateItemService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

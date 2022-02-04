@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ItemModels\ItemCreate.cs" />
+    <Compile Include="ItemModels\ItemDetail.cs" />
     <Compile Include="ItemModels\ItemsList.cs" />
     <Compile Include="OutpostModels\OutpostCreate.cs" />
     <Compile Include="OutpostModels\OutpostList.cs" />

@@ -58,5 +58,26 @@ namespace SpaceBlackMarket.Services
             }
         }
 
+        public ItemDetail GetItemById(int id)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Items
+                        .Single(e => e.ItemId == id);
+                return
+                    new ItemDetail
+                    {
+                        ItemId = entity.ItemId,
+                        ItemName = entity.ItemName,
+                        ItemPrice = entity.ItemPrice,
+                        ItemDescription = entity.ItemDescription,
+                        ItemType = entity.ItemType,
+                        SmuggleDelivery = entity.SmuggleDelivery
+                    };
+            }
+        }
+
     }
 }
