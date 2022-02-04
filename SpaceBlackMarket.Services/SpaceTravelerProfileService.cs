@@ -58,5 +58,43 @@ namespace SpaceBlackMarket.Services
                 return query.ToArray();
             }
         }
+
+        public SpaceTravelerDetail GetSpaceTravelerById(int id)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Single(e => e.SpaceTravelerProfileId == id);
+                return
+                        new SpaceTravelerDetail
+                        {
+                            SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
+                            TravelerAlias = entity.TravelerAlias,
+                            Credits = entity.Credits,
+                            WantedLevel = entity.WantedLevel,
+                            WillingToCooperate = entity.WillingToCooperate
+                        };
+            }
+        }
+
+        public bool UpdateSpaceTraveler(SpaceTravelerEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Single(e => e.SpaceTravelerProfileId == model.SpaceTravelerProfileId);
+
+                entity.TravelerAlias = model.TravelerAlias;
+                entity.Credits = model.Credits;
+                entity.WantedLevel = model.WantedLevel;
+                entity.WillingToCooperate = model.WillingToCooperate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

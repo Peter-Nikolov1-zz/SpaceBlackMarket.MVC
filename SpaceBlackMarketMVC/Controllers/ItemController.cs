@@ -103,5 +103,27 @@ namespace SpaceBlackMarketMVC.Controllers
             ModelState.AddModelError("", "Your item could not be updated.");
             return View();
         }
+
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateItemService();
+            var model = svc.GetItemById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateItemService();
+
+            service.DeleteItem(id);
+
+            TempData["SaveResult"] = "Your Item was deleted.";
+
+            return RedirectToAction("Index");
+        }
     }
 }

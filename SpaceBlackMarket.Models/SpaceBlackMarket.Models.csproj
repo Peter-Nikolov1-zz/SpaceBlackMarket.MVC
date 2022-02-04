@@ -63,6 +63,8 @@
     <Compile Include="OutpostModels\OutpostList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerCreate.cs" />
+    <Compile Include="SpaceTravelerModels\SpaceTravelerDetail.cs" />
+    <Compile Include="SpaceTravelerModels\SpaceTravelerEdit.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerList.cs" />
   </ItemGroup>
   <ItemGroup>

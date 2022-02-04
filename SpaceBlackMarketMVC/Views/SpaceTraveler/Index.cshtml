@@ -51,9 +51,9 @@
                 @Html.DisplayFor(modelItem => item.WantedLevel)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id = item.SpaceTravelerProfileId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SpaceTravelerProfileId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SpaceTravelerProfileId })
             </td>
         </tr>
     }

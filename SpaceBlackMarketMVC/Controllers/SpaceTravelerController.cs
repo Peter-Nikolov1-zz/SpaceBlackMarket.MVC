@@ -48,6 +48,30 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateSpaceTravelerService();
+            var model = svc.GetSpaceTravelerById(id);
+
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateSpaceTravelerService();
+            var detail = service.GetSpaceTravelerById(id);
+            var model =
+                new SpaceTravelerEdit
+                {
+                    SpaceTravelerProfileId = detail.SpaceTravelerProfileId,
+                    TravelerAlias = detail.TravelerAlias,
+                    Credits = detail.Credits,
+                    WantedLevel = detail.WantedLevel,
+                    WillingToCooperate = detail.WillingToCooperate
+                };
+            return View(model);
+        }
+
         private SpaceTravelerProfileService CreateSpaceTravelerService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
