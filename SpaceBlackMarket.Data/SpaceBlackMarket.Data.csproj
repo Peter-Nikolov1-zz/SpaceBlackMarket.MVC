@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202202040124240_DangerLevelIsEnum.Designer.cs">
       <DependentUpon>202202040124240_DangerLevelIsEnum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202041724522_AddedOutpostIdToModel.cs" />
+    <Compile Include="Migrations\202202041724522_AddedOutpostIdToModel.Designer.cs">
+      <DependentUpon>202202041724522_AddedOutpostIdToModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202040124240_DangerLevelIsEnum.resx">
       <DependentUpon>202202040124240_DangerLevelIsEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202041724522_AddedOutpostIdToModel.resx">
+      <DependentUpon>202202041724522_AddedOutpostIdToModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,6 +10,9 @@ namespace SpaceBlackMarket.Models.OutpostModels
 {
     public class OutpostList
     {
+        [Display(Name = "Outpost Id")]
+        public int OutpostId { get; set; }
+
         [Display(Name = "Outpost Name")]
         public string OutpostName { get; set; }
 

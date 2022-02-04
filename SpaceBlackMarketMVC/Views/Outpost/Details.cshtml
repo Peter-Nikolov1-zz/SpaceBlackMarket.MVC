@@ -1,0 +1,50 @@
+﻿@model SpaceBlackMarket.Models.OutpostModels.OutpostDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OutpostDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OutpostId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutpostId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutpostName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutpostName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GalaxyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GalaxyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemCoordinates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemCoordinates)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutpostId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

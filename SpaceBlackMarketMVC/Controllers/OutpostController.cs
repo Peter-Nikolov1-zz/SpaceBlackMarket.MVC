@@ -47,7 +47,10 @@ namespace SpaceBlackMarketMVC.Controllers
 
         public ActionResult Details(int id)
         {
-            var svc = ();
+            var svc = new OutpostService();
+            var model = svc.GetOutpostById(id);
+
+            return View(model);
         }
         
     }

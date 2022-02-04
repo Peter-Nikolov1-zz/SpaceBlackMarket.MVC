@@ -48,6 +48,7 @@ namespace SpaceBlackMarket.Services
                              e =>
                                  new ItemsList
                                  {
+                                     ItemId = e.ItemId,
                                      ItemName = e.ItemName,
                                      ItemType = e.ItemType,
                                      ItemDescription = e.ItemDescription
@@ -76,6 +77,26 @@ namespace SpaceBlackMarket.Services
                         ItemType = entity.ItemType,
                         SmuggleDelivery = entity.SmuggleDelivery
                     };
+            }
+        }
+
+        public bool UpdateItem(ItemEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Items
+                        .Single(e => e.ItemId == model.ItemId);
+
+                entity.ItemId = model.ItemId;
+                entity.ItemName = model.ItemName;
+                entity.ItemPrice = model.ItemPrice;
+                entity.ItemDescription = model.ItemDescription;
+                entity.ItemType = model.ItemType;
+                entity.SmuggleDelivery = model.SmuggleDelivery;
+
+                return ctx.SaveChanges() == 1;
             }
         }
 

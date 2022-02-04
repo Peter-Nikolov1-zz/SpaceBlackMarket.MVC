@@ -22,7 +22,7 @@ namespace SpaceBlackMarket.Services
                     DangerLevel = model.DangerLevel,
                 };
 
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.Outposts.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -31,7 +31,7 @@ namespace SpaceBlackMarket.Services
 
         public IEnumerable<OutpostList> GetOutposts()
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
@@ -40,6 +40,7 @@ namespace SpaceBlackMarket.Services
                             e =>
                                 new OutpostList
                                 {
+                                    OutpostId = e.OutpostId,
                                     OutpostName = e.OutpostName,
                                     GalaxyName = e.GalaxyName,
                                     SystemCoordinates = e.SystemCoordinates,
@@ -47,6 +48,27 @@ namespace SpaceBlackMarket.Services
                                 }
                         );
                 return query.ToArray();
+            }
+        }
+
+        public OutpostDetail GetOutpostById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Outposts
+                        .Single(e => e.OutpostId == id);
+                return
+                    new OutpostDetail
+                    {
+                        OutpostId = entity.OutpostId,
+                        OutpostName = entity.OutpostName,
+                        GalaxyName = entity.GalaxyName,
+                        SystemCoordinates = entity.SystemCoordinates,
+                        DangerLevel = entity.DangerLevel
+                    };
+                
             }
         }
     }
