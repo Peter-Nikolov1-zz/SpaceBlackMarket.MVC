@@ -12,6 +12,8 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
     {
         public int SpaceTravelerProfileId { get; set; }
 
+        public Guid OwnerId { get; set; }
+
         [Display(Name = "Alias")]
         public string TravelerAlias { get; set; }
 

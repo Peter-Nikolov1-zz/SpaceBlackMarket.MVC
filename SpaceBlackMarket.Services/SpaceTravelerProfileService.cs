@@ -71,6 +71,7 @@ namespace SpaceBlackMarket.Services
                         new SpaceTravelerDetail
                         {
                             SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
+                            OwnerId = entity.OwnerId,
                             TravelerAlias = entity.TravelerAlias,
                             Credits = entity.Credits,
                             WantedLevel = entity.WantedLevel,
@@ -88,6 +89,8 @@ namespace SpaceBlackMarket.Services
                         .SpaceTravelerProfile
                         .Single(e => e.SpaceTravelerProfileId == model.SpaceTravelerProfileId);
 
+                entity.SpaceTravelerProfileId = model.SpaceTravelerProfileId;
+                entity.OwnerId = model.OwnerId;
                 entity.TravelerAlias = model.TravelerAlias;
                 entity.Credits = model.Credits;
                 entity.WantedLevel = model.WantedLevel;

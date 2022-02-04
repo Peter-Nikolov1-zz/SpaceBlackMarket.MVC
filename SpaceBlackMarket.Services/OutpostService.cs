@@ -71,5 +71,20 @@ namespace SpaceBlackMarket.Services
                 
             }
         }
+
+        public bool DeleteOutpost(int outpostId)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Outposts
+                        .Single(e => e.OutpostId == outpostId);
+
+                ctx.Outposts.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

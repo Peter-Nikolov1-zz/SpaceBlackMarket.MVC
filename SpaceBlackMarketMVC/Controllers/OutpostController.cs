@@ -52,6 +52,29 @@ namespace SpaceBlackMarketMVC.Controllers
 
             return View(model);
         }
-        
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = new OutpostService();
+            var model = svc.GetOutpostById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = new OutpostService();
+
+            service.DeleteOutpost(id);
+
+            TempData["SaveResult"] = "Outpost Deleted.";
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

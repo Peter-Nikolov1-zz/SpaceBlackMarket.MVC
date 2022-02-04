@@ -64,11 +64,36 @@ namespace SpaceBlackMarketMVC.Controllers
                 new SpaceTravelerEdit
                 {
                     SpaceTravelerProfileId = detail.SpaceTravelerProfileId,
+                    OwnerId = detail.OwnerId,
                     TravelerAlias = detail.TravelerAlias,
                     Credits = detail.Credits,
                     WantedLevel = detail.WantedLevel,
                     WillingToCooperate = detail.WillingToCooperate
                 };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditConfirmed(int id, SpaceTravelerEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.SpaceTravelerProfileId != id)
+            {
+                ModelState.AddModelError("", "Id mismatch");
+                return View(model);
+            }
+
+            var service = CreateSpaceTravelerService();
+
+            if (service.UpdateSpaceTraveler(model))
+            {
+                TempData["SaveResult"] = "Space Traveler Updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Space Traveler could not be updated.");
             return View(model);
         }
 
