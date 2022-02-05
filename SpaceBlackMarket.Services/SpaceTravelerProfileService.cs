@@ -71,7 +71,7 @@ namespace SpaceBlackMarket.Services
                         new SpaceTravelerDetail
                         {
                             SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
-                            OwnerId = entity.OwnerId,
+                            //OwnerId = entity.OwnerId,
                             TravelerAlias = entity.TravelerAlias,
                             Credits = entity.Credits,
                             WantedLevel = entity.WantedLevel,
@@ -90,11 +90,26 @@ namespace SpaceBlackMarket.Services
                         .Single(e => e.SpaceTravelerProfileId == model.SpaceTravelerProfileId);
 
                 entity.SpaceTravelerProfileId = model.SpaceTravelerProfileId;
-                entity.OwnerId = model.OwnerId;
+                //entity.OwnerId = model.OwnerId;
                 entity.TravelerAlias = model.TravelerAlias;
                 entity.Credits = model.Credits;
                 entity.WantedLevel = model.WantedLevel;
                 entity.WillingToCooperate = model.WillingToCooperate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteSpaceTraveler(int spaceTravelerId)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Single(e => e.SpaceTravelerProfileId == spaceTravelerId);
+
+                ctx.SpaceTravelerProfile.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

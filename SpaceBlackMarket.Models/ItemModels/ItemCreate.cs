@@ -10,8 +10,8 @@ namespace SpaceBlackMarket.Models.ItemModels
 {
     public class ItemCreate
     {
-        [Display(Name = "Who is making this?")]
-        public int SpaceTravelerProfileId { get; set; }
+        //[Display(Name = "Who is making this?")]
+        //public int SpaceTravelerProfileId { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Please enter a longer name.")]

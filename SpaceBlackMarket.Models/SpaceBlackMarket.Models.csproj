@@ -60,6 +60,7 @@
     <Compile Include="ItemModels\ItemsList.cs" />
     <Compile Include="OutpostModels\OutpostCreate.cs" />
     <Compile Include="OutpostModels\OutpostDetail.cs" />
+    <Compile Include="OutpostModels\OutpostEdit.cs" />
     <Compile Include="OutpostModels\OutpostList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerCreate.cs" />

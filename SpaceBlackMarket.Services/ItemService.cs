@@ -23,7 +23,7 @@ namespace SpaceBlackMarket.Services
             var entity =
                 new Item()
                 {
-                    SpaceTravelerProfileId = model.SpaceTravelerProfileId,
+                    //SpaceTravelerProfileId = model.SpaceTravelerProfileId,
                     ItemName = model.Name,
                     ItemPrice = model.Price,
                     ItemDescription = model.Description,

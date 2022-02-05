@@ -10,20 +10,21 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
 {
     public class SpaceTravelerEdit
     {
+        [Display(Name = "Space Traveler Id")]
         public int SpaceTravelerProfileId { get; set; }
 
-        public Guid OwnerId { get; set; }
+        //public Guid OwnerId { get; set; }
 
-        [Display(Name = "Traveler Alias?")]
+        [Display(Name = "Traveler Alias")]
         public string TravelerAlias { get; set; }
 
-        [Display(Name = "How many Credits?")]
+        [Display(Name = "How many Credits")]
         public double Credits { get; set; }
 
-        [Display(Name = "Wanted Level?")]
+        [Display(Name = "Wanted Level")]
         public WantedLevel WantedLevel { get; set; }
 
-        [Display(Name = "Will they cooperate?")]
+        [Display(Name = "Will they cooperate")]
         public bool WillingToCooperate { get; set; }
     }
 }
