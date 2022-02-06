@@ -10,7 +10,7 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
 {
     public class SpaceTravelerList
     {
-        [Display]
+        [Display(Name = "Traveler Id")]
         public int SpaceTravelerProfileId { get; set; }
 
         [Display(Name = "Alias")]

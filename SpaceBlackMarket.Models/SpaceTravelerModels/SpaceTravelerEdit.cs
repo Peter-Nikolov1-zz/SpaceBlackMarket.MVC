@@ -13,7 +13,7 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
         [Display(Name = "Space Traveler Id")]
         public int SpaceTravelerProfileId { get; set; }
 
-        //public Guid OwnerId { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Display(Name = "Traveler Alias")]
         public string TravelerAlias { get; set; }

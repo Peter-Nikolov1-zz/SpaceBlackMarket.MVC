@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using SpaceBlackMarket.Data;
 using SpaceBlackMarket.Models.SpaceTravelerModels;
 using SpaceBlackMarket.Services;
 using SpaceBlackMarketMVC.Data;
@@ -65,7 +66,6 @@ namespace SpaceBlackMarketMVC.Controllers
                 new SpaceTravelerEdit
                 {
                     SpaceTravelerProfileId = detail.SpaceTravelerProfileId,
-                    //OwnerId = detail.OwnerId,
                     TravelerAlias = detail.TravelerAlias,
                     Credits = detail.Credits,
                     WantedLevel = detail.WantedLevel,

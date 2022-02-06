@@ -10,6 +10,7 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
 {
     public class SpaceTravelerDetail
     {
+        [Display(Name = "Traveler Id")]
         public int SpaceTravelerProfileId { get; set; }
 
         public Guid OwnerId { get; set; }
