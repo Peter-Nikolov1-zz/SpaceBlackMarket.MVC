@@ -1,5 +1,6 @@
 namespace SpaceBlackMarket.Data.Migrations
 {
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -15,6 +16,9 @@ namespace SpaceBlackMarket.Data.Migrations
 
         protected override void Seed(SpaceBlackMarketMVC.Data.ApplicationDbContext context)
         {
+
+
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

@@ -15,7 +15,7 @@ namespace SpaceBlackMarket.Models.OutpostModels
 
         public string GalaxyName { get; set; }
 
-        public string SystemCoordinates { get; set; }
+        public string PlanetName { get; set; }
 
         public DangerLevel DangerLevel { get; set; }
     }

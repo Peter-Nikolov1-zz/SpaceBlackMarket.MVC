@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202202041724522_AddedOutpostIdToModel.Designer.cs">
       <DependentUpon>202202041724522_AddedOutpostIdToModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.cs" />
+    <Compile Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.Designer.cs">
+      <DependentUpon>202202050603103_RenamedSystCoordsToPlanetName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202041724522_AddedOutpostIdToModel.resx">
       <DependentUpon>202202041724522_AddedOutpostIdToModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.resx">
+      <DependentUpon>202202050603103_RenamedSystCoordsToPlanetName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

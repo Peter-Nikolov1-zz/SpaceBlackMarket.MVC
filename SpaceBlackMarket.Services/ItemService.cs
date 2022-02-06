@@ -11,12 +11,7 @@ namespace SpaceBlackMarket.Services
 {
     public class ItemService
     {
-        private readonly Guid _userId;
 
-        public ItemService(Guid ownerId)
-        {
-            _userId = ownerId;
-        }
 
         public bool CreateItem(ItemCreate model)
         {

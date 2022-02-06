@@ -18,7 +18,7 @@ namespace SpaceBlackMarket.Services
                 {
                     OutpostName = model.OutpostName,
                     GalaxyName = model.GalaxyName,
-                    SystemCoordinates = model.SystemCoordinates,
+                    PlanetName = model.PlanetName,
                     DangerLevel = model.DangerLevel,
                 };
 
@@ -43,7 +43,7 @@ namespace SpaceBlackMarket.Services
                                     OutpostId = e.OutpostId,
                                     OutpostName = e.OutpostName,
                                     GalaxyName = e.GalaxyName,
-                                    SystemCoordinates = e.SystemCoordinates,
+                                    PlanetName = e.PlanetName,
                                     DangerLevel = e.DangerLevel
                                 }
                         );
@@ -65,7 +65,7 @@ namespace SpaceBlackMarket.Services
                         OutpostId = entity.OutpostId,
                         OutpostName = entity.OutpostName,
                         GalaxyName = entity.GalaxyName,
-                        SystemCoordinates = entity.SystemCoordinates,
+                        PlanetName = entity.PlanetName,
                         DangerLevel = entity.DangerLevel
                     };
                 
@@ -85,6 +85,25 @@ namespace SpaceBlackMarket.Services
 
                 return ctx.SaveChanges() == 1;
             }
+        }
+
+        public bool UpdateOutpost(OutpostEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Outposts
+                        .Single(e => e.OutpostId == model.OutpostId);
+
+                entity.OutpostId = model.OutpostId;
+                entity.OutpostName = model.OutpostName;
+                entity.GalaxyName = model.GalaxyName;
+                entity.PlanetName = model.PlanetName;
+                entity.DangerLevel = model.DangerLevel;
+
+                return ctx.SaveChanges() == 1;
+            };
         }
     }
 }

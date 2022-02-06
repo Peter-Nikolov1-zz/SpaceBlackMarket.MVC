@@ -15,8 +15,8 @@ namespace SpaceBlackMarketMVC.Controllers
         // GET: Item
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ItemService(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ItemService();
             var model = service.GetItems();
 
             return View(model);
@@ -58,14 +58,14 @@ namespace SpaceBlackMarketMVC.Controllers
 
         private ItemService CreateItemService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ItemService(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ItemService();
             return service;
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreateItemService();
+            var service = new ItemService();
             var detail = service.GetItemById(id);
             var model =
                 new ItemEdit
@@ -82,7 +82,7 @@ namespace SpaceBlackMarketMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditConfirmed(int id, ItemEdit model)
+        public ActionResult Edit(int id, ItemEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 

@@ -76,7 +76,7 @@ namespace SpaceBlackMarketMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditConfirmed(int id, SpaceTravelerEdit model)
+        public ActionResult Edit(int id, SpaceTravelerEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 

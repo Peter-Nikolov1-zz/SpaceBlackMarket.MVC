@@ -1,5 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin;
 using Owin;
+using SpaceBlackMarketMVC.Data;
 
 [assembly: OwinStartupAttribute(typeof(SpaceBlackMarketMVC.Startup))]
 namespace SpaceBlackMarketMVC

@@ -53,6 +53,46 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = new OutpostService();
+            var detail = service.GetOutpostById(id);
+            var model =
+                new OutpostEdit
+                {
+                    OutpostId = detail.OutpostId,
+                    OutpostName = detail.OutpostName,
+                    GalaxyName = detail.GalaxyName,
+                    PlanetName = detail.PlanetName,
+                    DangerLevel = detail.DangerLevel
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, OutpostEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.OutpostId != id)
+            {
+                ModelState.AddModelError("", "Id does not match.");
+                return View(model);
+            }
+
+            var service = new OutpostService();
+
+            if (service.UpdateOutpost(model))
+            {
+                TempData["SaveResult"] = "Outpost has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Outpost could not be updated.");
+            return View();
+        }
+
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {

@@ -23,8 +23,7 @@ namespace SpaceBlackMarket.Models.OutpostModels
         public string GalaxyName { get; set; }
 
         [Required]
-        [Display(Name = "Example: RA 0h 42m 44s | Dec +41 16 9")]
-        public string SystemCoordinates { get; set; }
+        public string PlanetName { get; set; }
 
         [Required]
         [Display(Name = "Please select a danger level")]

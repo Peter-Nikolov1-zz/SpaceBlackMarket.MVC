@@ -19,8 +19,8 @@ namespace SpaceBlackMarket.Models.OutpostModels
         [Display(Name = "Galaxy Name")]
         public string GalaxyName { get; set; }
 
-        [Display(Name = "System Coordinates")]
-        public string SystemCoordinates { get; set; }
+        [Display(Name = "Planet Name")]
+        public string PlanetName { get; set; }
 
         [Display(Name = "Danger Level")]
         public DangerLevel DangerLevel { get; set; } // Associate with string... 1 = "Not Terribly Dangerous" ... 5 = "DO NOT COME WITHOUT A WEAPON"

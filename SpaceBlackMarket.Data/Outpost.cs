@@ -31,7 +31,7 @@ namespace SpaceBlackMarket.Data
 
         [Required]
         
-        public string SystemCoordinates { get; set; }
+        public string PlanetName { get; set; }
 
         [Required]
 

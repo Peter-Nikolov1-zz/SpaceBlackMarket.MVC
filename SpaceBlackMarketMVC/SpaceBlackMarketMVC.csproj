@@ -251,6 +251,7 @@
     <Content Include="Views\SpaceTraveler\Edit.cshtml" />
     <Content Include="Views\Outpost\Delete.cshtml" />
     <Content Include="Views\SpaceTraveler\Delete.cshtml" />
+    <Content Include="Views\Outpost\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
