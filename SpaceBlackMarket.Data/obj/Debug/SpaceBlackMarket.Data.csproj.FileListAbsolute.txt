@@ -21,3 +21,5 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Da
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.pdb
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.RenamedSystCoordsToPlanetName.resources
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.AssemblyReference.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.FirstSeededOutpost.resources
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.OutpostSeedandItemSeed.resources

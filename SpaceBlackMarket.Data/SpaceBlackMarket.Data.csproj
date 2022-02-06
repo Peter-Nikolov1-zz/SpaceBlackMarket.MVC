@@ -80,6 +80,14 @@
     <Compile Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.Designer.cs">
       <DependentUpon>202202050603103_RenamedSystCoordsToPlanetName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202060540071_FirstSeededOutpost.cs" />
+    <Compile Include="Migrations\202202060540071_FirstSeededOutpost.Designer.cs">
+      <DependentUpon>202202060540071_FirstSeededOutpost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202060602377_OutpostSeedandItemSeed.cs" />
+    <Compile Include="Migrations\202202060602377_OutpostSeedandItemSeed.Designer.cs">
+      <DependentUpon>202202060602377_OutpostSeedandItemSeed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.resx">
       <DependentUpon>202202050603103_RenamedSystCoordsToPlanetName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202060540071_FirstSeededOutpost.resx">
+      <DependentUpon>202202060540071_FirstSeededOutpost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202060602377_OutpostSeedandItemSeed.resx">
+      <DependentUpon>202202060602377_OutpostSeedandItemSeed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
