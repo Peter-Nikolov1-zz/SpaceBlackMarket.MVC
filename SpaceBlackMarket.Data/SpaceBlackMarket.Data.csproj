@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202202060602377_OutpostSeedandItemSeed.Designer.cs">
       <DependentUpon>202202060602377_OutpostSeedandItemSeed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202070055441_RolesCreated.cs" />
+    <Compile Include="Migrations\202202070055441_RolesCreated.Designer.cs">
+      <DependentUpon>202202070055441_RolesCreated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202060602377_OutpostSeedandItemSeed.resx">
       <DependentUpon>202202060602377_OutpostSeedandItemSeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202070055441_RolesCreated.resx">
+      <DependentUpon>202202070055441_RolesCreated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

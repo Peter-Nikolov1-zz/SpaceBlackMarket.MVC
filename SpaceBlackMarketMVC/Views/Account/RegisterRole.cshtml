@@ -8,10 +8,9 @@
 
 @using (Html.BeginForm("RegisterRole", "Account", FormMethod.Post, new { @class = "form-horizonal", role = "form" }))
 {
-
+    @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
     <hr />
-    @Html.AntiForgeryToken()
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.Label("Select Role", new { @class = "col-md-2 control-label" })

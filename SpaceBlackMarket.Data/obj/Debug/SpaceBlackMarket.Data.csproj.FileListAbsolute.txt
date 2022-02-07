@@ -23,3 +23,4 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Da
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.AssemblyReference.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.FirstSeededOutpost.resources
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.OutpostSeedandItemSeed.resources
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.RolesCreated.resources
