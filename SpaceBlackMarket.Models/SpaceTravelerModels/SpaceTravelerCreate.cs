@@ -13,19 +13,19 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
         [Required]
         [MaxLength(20,ErrorMessage = "What kind of a name is that? SHORTER!")]
         [MinLength(4, ErrorMessage = "Gotta be more than that")]
-        [Display(Name = "What do they go by?")]
+        [Display(Name = "What do you go by?")]
         public string TravelerAlias { get; set; }
 
         [Required]
-        [Display(Name = "How much trouble is this person in?")]
+        [Display(Name = "How much trouble are you in?")]
         public WantedLevel WantedLevel { get; set; }
 
         [Required]
-        [Display(Name = "Do they work with others?")]
+        [Display(Name = "Do you work with others?")]
         public bool WillingToCooperate { get; set; }
 
         [Required]
-        [Display(Name = "How many credits do they have?")]
+        [Display(Name = "How many credits do you have?")]
         public double Credits { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
         [Display(Name = "Wanted Level")]
         public WantedLevel WantedLevel { get; set; }
 
-        [Display(Name = "Will they cooperate")]
+        [Display(Name = "Will they cooperate?")]
         public bool WillingToCooperate { get; set; }
     }
 }
