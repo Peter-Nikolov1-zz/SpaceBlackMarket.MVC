@@ -44,12 +44,13 @@ namespace SpaceBlackMarket.Services
                 var query =
                     ctx
                         .SpaceTravelerProfile
-                        .Where(e => e.OwnerId == _userId)
+                        //.Where(e => e.OwnerId == _userId) 
                         .Select(
                             e =>
                                 new SpaceTravelerList
                                 {
                                     SpaceTravelerProfileId = e.SpaceTravelerProfileId,
+                                    OwnerId = e.OwnerId,
                                     TravelerAlias = e.TravelerAlias,
                                     WantedLevel = e.WantedLevel,
                                     WillingToCooperate = e.WillingToCooperate
@@ -61,7 +62,7 @@ namespace SpaceBlackMarket.Services
 
         public SpaceTravelerDetail GetSpaceTravelerById(int id)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
@@ -80,9 +81,50 @@ namespace SpaceBlackMarket.Services
             }
         }
 
+        public IEnumerable<SpaceTravelerProfilePage> GetTravelerProfilePage()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Select(
+                            e =>
+                                new SpaceTravelerProfilePage
+                                {
+
+                                    TravelerAlias = e.TravelerAlias,
+                                    Credits = e.Credits,
+                                    SpaceTravelerProfileId = e.SpaceTravelerProfileId
+                                }
+                       );
+                return query.ToArray();
+            }
+        }
+
+        public SpaceTravelerProfilePage GetSpaceTravelerProfilePageById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Single(e => e.SpaceTravelerProfileId == id);
+                return
+                        new SpaceTravelerProfilePage
+                        {
+                            SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
+                            TravelerAlias = entity.TravelerAlias,
+                            Credits = entity.Credits
+                        };
+            }
+        }
+
+        
+
         public bool UpdateSpaceTraveler(SpaceTravelerEdit model)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
@@ -102,7 +144,7 @@ namespace SpaceBlackMarket.Services
 
         public bool DeleteSpaceTraveler(int spaceTravelerId)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx

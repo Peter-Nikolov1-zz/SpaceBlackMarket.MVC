@@ -10,6 +10,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
+
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
@@ -38,6 +39,7 @@
     @foreach (var item in Model)
     {
         <tr>
+
             <td>
                 @Html.DisplayFor(modelItem => item.SpaceTravelerProfileId)
             </td>
@@ -53,7 +55,8 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.SpaceTravelerProfileId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.SpaceTravelerProfileId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.SpaceTravelerProfileId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.SpaceTravelerProfileId }) |
+                @Html.ActionLink("Profile", "Profile", new { id = item.SpaceTravelerProfileId})
             </td>
         </tr>
     }

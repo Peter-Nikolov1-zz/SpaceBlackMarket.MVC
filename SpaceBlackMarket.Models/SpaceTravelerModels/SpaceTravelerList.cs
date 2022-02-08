@@ -13,6 +13,9 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
         [Display(Name = "Traveler Id")]
         public int SpaceTravelerProfileId { get; set; }
 
+        [Display(Name = "Owner Id")]
+        public Guid OwnerId { get; set; }
+
         [Display(Name = "Alias")]
         public string TravelerAlias { get; set; }
 
@@ -21,5 +24,6 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
         
         [Display(Name = "Will they Cooperate?")]
         public bool WillingToCooperate { get; set; }
+
     }
 }
