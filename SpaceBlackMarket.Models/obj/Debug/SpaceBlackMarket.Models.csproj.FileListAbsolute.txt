@@ -1,4 +1,3 @@
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\SpaceBlackMarket.Models.dll.config
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\SpaceBlackMarket.Models.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\SpaceBlackMarket.Models.pdb
@@ -14,6 +13,7 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Mo
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.csproj.AssemblyReference.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.csproj.CopyComplete
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Models\obj\Debug\SpaceBlackMarket.Models.pdb

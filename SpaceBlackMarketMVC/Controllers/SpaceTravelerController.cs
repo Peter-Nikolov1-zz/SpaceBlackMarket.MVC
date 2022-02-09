@@ -65,7 +65,6 @@ namespace SpaceBlackMarketMVC.Controllers
         }
 
 
-
         public ActionResult Edit(int id)
         {
             var service = CreateSpaceTravelerService();

@@ -30,7 +30,12 @@ namespace SpaceBlackMarket.Data.Migrations
                 new Item() { ItemName = "Electrified Brass Knuckles", ItemPrice = 15530.92, ItemDescription = "Taserface used these during his many dangerous encounters. Make sure they are turned off before putting them away...", ItemType = ItemType.Weapon, SmuggleDelivery = true });
             context.SaveChanges();
 
-            
+            context.SpaceTravelerProfile.AddOrUpdate(n => n.SpaceTravelerProfileId, new SpaceTravelerProfile() { TravelerAlias = "Greedy Traveler", Credits = 5203.62, WantedLevel = WantedLevel.TheyStoleCandyFromABaby, WillingToCooperate = false },
+                new SpaceTravelerProfile() { TravelerAlias = "Lungebob Squareshorts", Credits = 529.5, WantedLevel = WantedLevel.GalacticFedsWantThem, WillingToCooperate = true },
+                new SpaceTravelerProfile() { TravelerAlias = "Neter Pikolov", Credits = 10000000, WantedLevel = WantedLevel.TheyStoleCandyFromABaby, WillingToCooperate = true },
+                new SpaceTravelerProfile() { TravelerAlias = "Weirdo Son", Credits = 1462.94, WantedLevel = WantedLevel.GalacticFedsWantThem, WillingToCooperate = false },
+                new SpaceTravelerProfile() { TravelerAlias = "Squirrel", Credits = 2624, WantedLevel = WantedLevel.HighlyDesired, WillingToCooperate = true });
+            context.SaveChanges();
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

@@ -1,4 +1,3 @@
-C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\obj\Debug\SpaceBlackMarket.Services.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\bin\Debug\SpaceBlackMarket.Services.dll.config
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\bin\Debug\SpaceBlackMarket.Services.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\bin\Debug\SpaceBlackMarket.Services.pdb
@@ -17,6 +16,7 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Se
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\obj\Debug\SpaceBlackMarket.Services.csproj.AssemblyReference.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\obj\Debug\SpaceBlackMarket.Services.csproj.CoreCompileInputs.cache
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\obj\Debug\SpaceBlackMarket.Services.csproj.CopyComplete
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\obj\Debug\SpaceBlackMarket.Services.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\SpaceBlackMarketMVC\SpaceBlackMarket.Services\obj\Debug\SpaceBlackMarket.Services.pdb
