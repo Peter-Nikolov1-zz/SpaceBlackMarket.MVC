@@ -18,6 +18,19 @@ namespace SpaceBlackMarket.Services
             _userId = userId;
         }
 
+        public bool UserOwnsProfile()
+        {
+            var users = GetSpaceTravelers();
+            users = users.ToList();
+            int dbCount = users.Count();
+
+            if(dbCount == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public bool CreateSpaceTraveler(SpaceTravelerCreate model)
         {
             var entity =
@@ -44,7 +57,7 @@ namespace SpaceBlackMarket.Services
                 var query =
                     ctx
                         .SpaceTravelerProfile
-                        //.Where(e => e.OwnerId == _userId) 
+                        .Where(e => e.OwnerId == _userId) 
                         .Select(
                             e =>
                                 new SpaceTravelerList

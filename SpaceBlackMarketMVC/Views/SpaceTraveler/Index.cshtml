@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<SpaceBlackMarket.Models.SpaceTravelerModels.SpaceTravelerList>
 
+
 @{
     ViewBag.Title = "Index";
 }
@@ -53,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.WantedLevel)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.SpaceTravelerProfileId }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.SpaceTravelerProfileId, }) |
                 @Html.ActionLink("Details", "Details", new { id = item.SpaceTravelerProfileId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.SpaceTravelerProfileId }) |
                 @Html.ActionLink("Profile", "Profile", new { id = item.SpaceTravelerProfileId})

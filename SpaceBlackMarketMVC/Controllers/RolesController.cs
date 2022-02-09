@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using SpaceBlackMarketMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace SpaceBlackMarketMVC.Controllers
-{ 
+{
     [Authorize]
     public class RolesController : Controller
     {
@@ -36,5 +38,8 @@ namespace SpaceBlackMarketMVC.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+
     }
 }

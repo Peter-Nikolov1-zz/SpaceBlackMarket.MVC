@@ -39,6 +39,12 @@ namespace SpaceBlackMarketMVC.Controllers
 
             var service = CreateSpaceTravelerService();
 
+            if (service.UserOwnsProfile())
+            {
+                TempData["ExceededProfileCount"] = "You already have a profile.";
+                return View(model);
+            }
+
             if (service.CreateSpaceTraveler(model)) 
             {
                 TempData["SaveResult"] = "Space Traveler Created.";

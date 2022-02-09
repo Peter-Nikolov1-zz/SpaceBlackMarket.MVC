@@ -20,12 +20,7 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
-        public ActionResult ProfilePage()
-        {
-            return View();
-        }
-
-        public ActionResult ProfilePage(int id)
+        public ActionResult TravelerProfile(int id)
         {
             var svc = CreateSpaceTravelerProfilePage();
             var model = svc.GetSpaceTravelerProfilePageById(id);
