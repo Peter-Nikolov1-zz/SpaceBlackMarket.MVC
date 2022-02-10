@@ -34,5 +34,10 @@ namespace SpaceBlackMarket.Data
         public WantedLevel WantedLevel { get; set; }
 
         public bool WillingToCooperate { get; set; }
+
+        [ForeignKey(nameof(Transaction))]
+        public int? TransactionId { get; set; }
+
+        public virtual Transaction Transaction { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using SpaceBlackMarket.Data;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using SpaceBlackMarket.Data;
 using SpaceBlackMarket.Models.SpaceTravelerModels;
 using SpaceBlackMarketMVC.Data;
 using System;
@@ -13,6 +14,12 @@ namespace SpaceBlackMarket.Services
     {
         private readonly Guid _userId;
 
+        //ApplicationDbContext context;
+        //public SpaceTravelerProfileService()
+        //{
+        //    context = new ApplicationDbContext();
+        //}
+
         public SpaceTravelerProfileService(Guid userId)
         {
             _userId = userId;
@@ -24,7 +31,7 @@ namespace SpaceBlackMarket.Services
             users = users.ToList();
             int dbCount = users.Count();
 
-            if(dbCount == 0)
+            if (dbCount == 0)
             {
                 return false;
             }
@@ -54,21 +61,22 @@ namespace SpaceBlackMarket.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+
                 var query =
-                    ctx
-                        .SpaceTravelerProfile
-                        .Where(e => e.OwnerId == _userId) 
-                        .Select(
-                            e =>
-                                new SpaceTravelerList
-                                {
-                                    SpaceTravelerProfileId = e.SpaceTravelerProfileId,
-                                    OwnerId = e.OwnerId,
-                                    TravelerAlias = e.TravelerAlias,
-                                    WantedLevel = e.WantedLevel,
-                                    WillingToCooperate = e.WillingToCooperate
-                                }
-                       );
+                ctx
+                    .SpaceTravelerProfile
+                    //.Where(e => e.OwnerId == _userId)
+                    .Select(
+                        e =>
+                            new SpaceTravelerList
+                            {
+                                SpaceTravelerProfileId = e.SpaceTravelerProfileId,
+                                OwnerId = e.OwnerId,
+                                TravelerAlias = e.TravelerAlias,
+                                WantedLevel = e.WantedLevel,
+                                WillingToCooperate = e.WillingToCooperate
+                            }
+                   );
                 return query.ToArray();
             }
         }
@@ -133,7 +141,7 @@ namespace SpaceBlackMarket.Services
             }
         }
 
-        
+
 
         public bool UpdateSpaceTraveler(SpaceTravelerEdit model)
         {

@@ -175,6 +175,7 @@
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\SpaceTravelerController.cs" />
     <Compile Include="Controllers\SpaceTravelerProfilePageController.cs" />
+    <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -296,7 +297,9 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
-    <Content Include="Views\SpaceTravelerProfilePage\TravelerProfile.cshtml" />
+    <Content Include="Views\ProfilePage\TravelerProfile.cshtml" />
+    <Content Include="Views\Transaction\Index.cshtml" />
+    <Content Include="Views\Transaction\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -39,6 +39,7 @@ namespace SpaceBlackMarket.Services
                 var query =
                      ctx
                          .Items
+                         .Where(e => e.IsSold == false)
                          .Select(
                              e =>
                                  new ItemsList

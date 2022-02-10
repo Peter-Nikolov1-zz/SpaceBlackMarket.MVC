@@ -20,7 +20,7 @@ namespace SpaceBlackMarketMVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new SpaceTravelerProfileService(userId);
             var model = service.GetSpaceTravelers();
-
+            
             return View(model);
         }
 

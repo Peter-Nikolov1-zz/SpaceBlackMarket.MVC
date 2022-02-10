@@ -35,8 +35,9 @@ namespace SpaceBlackMarket.Data
         [Required]
         public ItemType ItemType { get; set; }
 
-        [Required]
+        public bool IsSold { get; set; }
 
+        [Required]
         public bool SmuggleDelivery { get; set; }
 
         [ForeignKey(nameof(Outpost))] // I want to know what items an Outpost has
@@ -46,5 +47,10 @@ namespace SpaceBlackMarket.Data
         [ForeignKey(nameof(SpaceTravelerProfile))] // I want to know what items a traveler has on their profile
         public int? SpaceTravelerProfileId { get; set; }
         public virtual SpaceTravelerProfile SpaceTravelerProfile { get; set; }
+
+        [ForeignKey(nameof(Transaction))]
+        public int? TransactionId { get; set; }
+
+        public virtual Transaction Transaction { get; set; }
     }
 }

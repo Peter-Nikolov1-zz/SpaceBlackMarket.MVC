@@ -68,6 +68,8 @@
     <Compile Include="SpaceTravelerModels\SpaceTravelerEdit.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerList.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerProfilePage.cs" />
+    <Compile Include="TransactionModels\TransactionCreate.cs" />
+    <Compile Include="TransactionModels\TransactionList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -92,10 +92,19 @@
     <Compile Include="Migrations\202202070055441_RolesCreated.Designer.cs">
       <DependentUpon>202202070055441_RolesCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202100051417_AddedTransactionInDataLayer.cs" />
+    <Compile Include="Migrations\202202100051417_AddedTransactionInDataLayer.Designer.cs">
+      <DependentUpon>202202100051417_AddedTransactionInDataLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202100139083_TransactionFKNowInItem.cs" />
+    <Compile Include="Migrations\202202100139083_TransactionFKNowInItem.Designer.cs">
+      <DependentUpon>202202100139083_TransactionFKNowInItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceTravelerProfile.cs" />
+    <Compile Include="Transaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -128,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202070055441_RolesCreated.resx">
       <DependentUpon>202202070055441_RolesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202100051417_AddedTransactionInDataLayer.resx">
+      <DependentUpon>202202100051417_AddedTransactionInDataLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202100139083_TransactionFKNowInItem.resx">
+      <DependentUpon>202202100139083_TransactionFKNowInItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
