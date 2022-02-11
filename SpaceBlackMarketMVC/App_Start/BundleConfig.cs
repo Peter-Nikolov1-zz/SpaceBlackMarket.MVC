@@ -24,7 +24,7 @@ namespace SpaceBlackMarketMVC
 
             bundles.Add(new Bundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/Site.css"));
+                      "~/Content/site.css"));
         }
     }
 }

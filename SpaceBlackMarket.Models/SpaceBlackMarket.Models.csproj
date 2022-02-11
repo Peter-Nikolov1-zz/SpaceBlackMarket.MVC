@@ -75,7 +75,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SpaceBlackMarket.Data\SpaceBlackMarket.Data.csproj">
       <Project>{030A68E5-0A58-4B6E-ACB2-127CF1C871B9}</Project>
