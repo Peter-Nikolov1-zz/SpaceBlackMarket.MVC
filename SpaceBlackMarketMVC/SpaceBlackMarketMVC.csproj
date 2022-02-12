@@ -298,9 +298,10 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
-    <Content Include="Views\ProfilePage\TravelerProfile.cshtml" />
     <Content Include="Views\Transaction\Index.cshtml" />
     <Content Include="Views\Transaction\Create.cshtml" />
+    <Content Include="Views\SpaceTravelerProfilePage\TravelerProfile.cshtml" />
+    <Content Include="Views\SpaceTravelerProfilePage\EditProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,4 +1,5 @@
 ﻿using SpaceBlackMarket.Models.TransactionModels;
+using SpaceBlackMarket.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,13 @@ namespace SpaceBlackMarketMVC.Controllers
             return View();
         }
 
-        public ActionResult Create(TransactionCreate model)
-        {
-            if (ModelState.IsValid)
-            {
+        //public ActionResult Create(TransactionCreate model)
+        //{
+        //    if (!ModelState.IsValid) return View(model);
 
-            }
-            return View();
-        }
+        //    var service = new TransactionService();
+
+            
+        //}
     }
 }

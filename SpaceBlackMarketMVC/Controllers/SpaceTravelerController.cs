@@ -43,7 +43,7 @@ namespace SpaceBlackMarketMVC.Controllers
             {
                 TempData["ExceededProfileCount"] = "You already have a profile.";
                 return View(model);
-            }
+            };
 
             if (service.CreateSpaceTraveler(model)) 
             {

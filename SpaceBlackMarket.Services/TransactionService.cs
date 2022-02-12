@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SpaceBlackMarket.Data;
+using SpaceBlackMarket.Models.TransactionModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,13 @@ namespace SpaceBlackMarket.Services
 {
     public class TransactionService
     {
-        
+        //public bool CreateTransaction(TransactionCreate model)
+        //{
+        //    var entity =
+        //        new Transaction()
+        //        {
+
+        //        }
+        //}
     }
 }

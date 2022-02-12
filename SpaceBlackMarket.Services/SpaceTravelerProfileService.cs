@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using SpaceBlackMarket.Data;
+using SpaceBlackMarket.Models.ProfilePage;
 using SpaceBlackMarket.Models.SpaceTravelerModels;
 using SpaceBlackMarketMVC.Data;
 using System;
@@ -14,12 +15,6 @@ namespace SpaceBlackMarket.Services
     {
         private readonly Guid _userId;
 
-        //ApplicationDbContext context;
-        //public SpaceTravelerProfileService()
-        //{
-        //    context = new ApplicationDbContext();
-        //}
-
         public SpaceTravelerProfileService(Guid userId)
         {
             _userId = userId;
@@ -27,6 +22,7 @@ namespace SpaceBlackMarket.Services
 
         public bool UserOwnsProfile()
         {
+            
             var users = GetSpaceTravelers();
             users = users.ToList();
             int dbCount = users.Count();
@@ -61,7 +57,6 @@ namespace SpaceBlackMarket.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-
                 var query =
                 ctx
                     .SpaceTravelerProfile
@@ -77,6 +72,27 @@ namespace SpaceBlackMarket.Services
                                 WillingToCooperate = e.WillingToCooperate
                             }
                    );
+                return query.ToArray();
+            }
+        }
+
+        public IEnumerable<SpaceTravelerProfilePage> GetTravelerProfilePage()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Select(
+                            e =>
+                                new SpaceTravelerProfilePage
+                                {
+
+                                    TravelerAlias = e.TravelerAlias,
+                                    Credits = e.Credits,
+                                    SpaceTravelerProfileId = e.SpaceTravelerProfileId
+                                }
+                       );
                 return query.ToArray();
             }
         }
@@ -102,27 +118,6 @@ namespace SpaceBlackMarket.Services
             }
         }
 
-        public IEnumerable<SpaceTravelerProfilePage> GetTravelerProfilePage()
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query =
-                    ctx
-                        .SpaceTravelerProfile
-                        .Select(
-                            e =>
-                                new SpaceTravelerProfilePage
-                                {
-
-                                    TravelerAlias = e.TravelerAlias,
-                                    Credits = e.Credits,
-                                    SpaceTravelerProfileId = e.SpaceTravelerProfileId
-                                }
-                       );
-                return query.ToArray();
-            }
-        }
-
         public SpaceTravelerProfilePage GetSpaceTravelerProfilePageById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -137,11 +132,10 @@ namespace SpaceBlackMarket.Services
                             SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
                             TravelerAlias = entity.TravelerAlias,
                             Credits = entity.Credits
+                            
                         };
             }
         }
-
-
 
         public bool UpdateSpaceTraveler(SpaceTravelerEdit model)
         {
@@ -154,6 +148,25 @@ namespace SpaceBlackMarket.Services
 
                 entity.SpaceTravelerProfileId = model.SpaceTravelerProfileId;
                 entity.OwnerId = model.OwnerId;
+                entity.TravelerAlias = model.TravelerAlias;
+                entity.Credits = model.Credits;
+                entity.WantedLevel = model.WantedLevel;
+                entity.WillingToCooperate = model.WillingToCooperate;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool UpdateProfilePage(ProfileEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Single(e => e.SpaceTravelerProfileId == model.SpaceTravelerProfileId);
+
+                entity.SpaceTravelerProfileId = model.SpaceTravelerProfileId;
                 entity.TravelerAlias = model.TravelerAlias;
                 entity.Credits = model.Credits;
                 entity.WantedLevel = model.WantedLevel;
