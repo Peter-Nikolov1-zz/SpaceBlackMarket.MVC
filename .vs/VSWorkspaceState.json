@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SpaceBlackMarket.Models",
+    "\\SpaceBlackMarket.Models\\ItemModels",
+    "\\SpaceBlackMarket.Models\\TransactionModels",
+    "\\SpaceBlackMarket.Services",
+    "\\SpaceBlackMarketMVC",
+    "\\SpaceBlackMarketMVC\\Controllers",
+    "\\SpaceBlackMarketMVC\\Views",
+    "\\SpaceBlackMarketMVC\\Views\\SpaceTraveler",
+    "\\SpaceBlackMarketMVC\\Views\\Transaction"
   ],
-  "SelectedNode": "\\SpaceBlackMarketMVC.sln",
+  "SelectedNode": "\\SpaceBlackMarketMVC\\Views\\Item\\Delete.cshtml",
   "PreviewInSolutionExplorer": false
 }

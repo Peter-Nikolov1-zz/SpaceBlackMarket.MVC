@@ -4,14 +4,8 @@
     ViewBag.Title = "TravelerProfile";
 }
 
-<h2>TravelerProfile</h2>
 
 <div>
-    @{
-        string welcomeName = Model.TravelerAlias;
-
-    }
-    @{ $"Welcome, {welcomeName}!"; }
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -42,5 +36,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "EditProfile", new { id = Model.SpaceTravelerProfileId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back Home", "Index", "Home", null, null)
 </p>

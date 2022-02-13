@@ -10,13 +10,7 @@ namespace SpaceBlackMarket.Services
 {
     public class TransactionService
     {
-        //public bool CreateTransaction(TransactionCreate model)
-        //{
-        //    var entity =
-        //        new Transaction()
-        //        {
+        
 
-        //        }
-        //}
     }
 }

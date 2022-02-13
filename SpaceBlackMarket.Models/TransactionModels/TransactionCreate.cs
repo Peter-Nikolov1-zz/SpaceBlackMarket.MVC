@@ -11,9 +11,17 @@ namespace SpaceBlackMarket.Models.TransactionModels
 {
     public class TransactionCreate
     {
-        [Required]
+        [Display(Name = "Item ID")]
         public int ItemId { get; set; }
 
-        public virtual List<Item> Item { get; set; } // Make dropdown list in View
+        [Display(Name = "Purchase Date")]
+        public DateTime DateOfPurchase { get; set; }
+
+        public double CreditsAmount { get; set; }
+
+        [Required]
+        [Display(Name = "Item")]
+        public string SelectItems { get; set; }
+        public IEnumerable<Item> Item { get; set; } // Make dropdown list in View
     }
 }

@@ -21,5 +21,8 @@ namespace SpaceBlackMarket.Models.ItemModels
 
         [Display(Name = "Item Description")]
         public string ItemDescription { get; set; }
+
+        [Display(Name = "Is It Sold?")]
+        public bool IsSold { get; set; }
     }
 }

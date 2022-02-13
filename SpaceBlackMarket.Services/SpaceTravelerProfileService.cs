@@ -131,8 +131,9 @@ namespace SpaceBlackMarket.Services
                         {
                             SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
                             TravelerAlias = entity.TravelerAlias,
-                            Credits = entity.Credits
-                            
+                            Credits = entity.Credits,
+                            WantedLevel = entity.WantedLevel,
+                            WillingToCooperate = entity.WillingToCooperate
                         };
             }
         }

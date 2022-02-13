@@ -1,24 +1,28 @@
 ﻿using Microsoft.AspNet.Identity;
 using SpaceBlackMarket.Models.ItemModels;
 using SpaceBlackMarket.Services;
+using SpaceBlackMarketMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
     [Authorize]
+
     public class ItemController : Controller
     {
+        ApplicationDbContext _db = new ApplicationDbContext();
+
         // GET: Item
         public ActionResult Index()
         {
             //var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ItemService();
             var model = service.GetItems();
-
             return View(model);
         }
         

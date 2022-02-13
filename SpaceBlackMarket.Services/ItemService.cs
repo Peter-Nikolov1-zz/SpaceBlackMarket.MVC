@@ -1,5 +1,6 @@
 ﻿using SpaceBlackMarket.Data;
 using SpaceBlackMarket.Models.ItemModels;
+using SpaceBlackMarket.Models.TransactionModels;
 using SpaceBlackMarketMVC.Data;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,6 @@ namespace SpaceBlackMarket.Services
 {
     public class ItemService
     {
-
-
         public bool CreateItem(ItemCreate model)
         {
             var entity =
@@ -32,6 +31,16 @@ namespace SpaceBlackMarket.Services
             }
         }
 
+        //public bool CreateTransaction(TransactionCreate model)
+        //{
+        //    var entity =
+        //        new Transaction()
+        //        {
+        //            DateOfPurchase = model.DateOfPurchase,
+        //            CreditsAmount = model.CreditsAmount,
+        //        }
+        //}
+
         public IEnumerable<ItemsList> GetItems()
         {
             using (var ctx = new ApplicationDbContext())
@@ -47,10 +56,10 @@ namespace SpaceBlackMarket.Services
                                      ItemId = e.ItemId,
                                      ItemName = e.ItemName,
                                      ItemType = e.ItemType,
-                                     ItemDescription = e.ItemDescription
+                                     ItemDescription = e.ItemDescription,
+                                     IsSold = e.IsSold
                                  }
                          );
-
                 return query.ToArray();
             }
         }

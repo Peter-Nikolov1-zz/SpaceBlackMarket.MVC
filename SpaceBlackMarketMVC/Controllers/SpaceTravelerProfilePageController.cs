@@ -70,7 +70,7 @@ namespace SpaceBlackMarketMVC.Controllers
             if (service.UpdateProfilePage(model))
             {
                 TempData["SaveResult"] = "Profile Updated";
-                return RedirectToAction("Index", "HomeController");
+                return RedirectToAction("Index", "Home");
             }
 
             ModelState.AddModelError("", "Profile Could Not Be Updated");

@@ -39,6 +39,21 @@ namespace SpaceBlackMarketMVC.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete()
+        {
+            var role = new IdentityRole();
+            return View(role);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(IdentityRole role)
+        {
+            context.Roles.Remove(role);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
 
     }

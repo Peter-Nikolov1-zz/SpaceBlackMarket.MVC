@@ -6,10 +6,11 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm())
+
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <h4>TransactionCreate</h4>
         <hr />
@@ -19,6 +20,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ItemId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ItemId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SelectItems, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.SelectItems, new SelectList(Model.Item, "Value", "Text"), htmlAttributes: new { @class = "form-control", id = "Item"})
+                    @Html.ValidationMessageFor(model => model.SelectItems, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -33,3 +42,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

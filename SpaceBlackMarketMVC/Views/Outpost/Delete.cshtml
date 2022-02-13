@@ -45,7 +45,8 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
@@ -54,3 +55,19 @@
         </div>
     }
 </div>
+
+<style>
+    .btn-default {
+        color: black;
+        background-color: white;
+    }
+
+    .btn-default:hover {
+        color: white;
+        background-color: gray;
+        }
+
+    #saveSuccess {
+        background-color: lightgreen;
+    }
+</style>

@@ -11,11 +11,19 @@ namespace SpaceBlackMarketMVC.Controllers
     public class TransactionController : Controller
     {
         [Authorize]
-        // GET: Transaction
-        public ActionResult Index()
+
+        private ItemService CreateItemService()
         {
-            var model = new TransactionList[0];
-            return View(model);
+            var service = new ItemService();
+            var itemList = service.GetItems();
+            return service;
+        }
+        // GET: Transaction
+        public ActionResult Transaction()
+        {
+            var service = new ItemService();
+            var itemList = service.GetItems();
+            return View(itemList);
         }
 
         public ActionResult Create()
@@ -23,13 +31,14 @@ namespace SpaceBlackMarketMVC.Controllers
             return View();
         }
 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
         //public ActionResult Create(TransactionCreate model)
         //{
         //    if (!ModelState.IsValid) return View(model);
 
-        //    var service = new TransactionService();
+        //    var service = CreateItemService();
 
-            
         //}
     }
 }
