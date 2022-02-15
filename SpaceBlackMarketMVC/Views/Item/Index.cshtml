@@ -22,7 +22,7 @@
         width: 200px;
     }
 </style>
-<table class="table table-borderless">
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ItemId) 
@@ -56,7 +56,8 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ItemId }) |
+                @Html.ActionLink("Purchase", "CreateTransaction", "Transaction")
             </td>
         </tr>
     }

@@ -308,7 +308,7 @@
     <Content Include="Views\SpaceTravelerProfilePage\EditProfile.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
     <Content Include="Views\Transaction\Transaction.cshtml" />
-    <Content Include="Views\Transaction\Create.cshtml" />
+    <Content Include="Views\Transaction\CreateTransaction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

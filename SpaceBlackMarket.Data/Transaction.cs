@@ -17,7 +17,9 @@ namespace SpaceBlackMarket.Data
         public DateTime DateOfPurchase { get; set; }
 
         [Required]
-        public double CreditsAmount { get; set; }        
+        public double CreditsAmount { get; set; }
+
+
 
     }
 }

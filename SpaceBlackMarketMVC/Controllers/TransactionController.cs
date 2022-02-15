@@ -1,5 +1,7 @@
-﻿using SpaceBlackMarket.Models.TransactionModels;
+﻿using SpaceBlackMarket.Data;
+using SpaceBlackMarket.Models.TransactionModels;
 using SpaceBlackMarket.Services;
+using SpaceBlackMarketMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +13,12 @@ namespace SpaceBlackMarketMVC.Controllers
     public class TransactionController : Controller
     {
         [Authorize]
-
-        private ItemService CreateItemService()
+        private TransactionService CreateTransactionService()
         {
-            var service = new ItemService();
-            var itemList = service.GetItems();
+            var service = new TransactionService();
             return service;
         }
+
         // GET: Transaction
         public ActionResult Transaction()
         {
@@ -26,19 +27,36 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(itemList);
         }
 
-        public ActionResult Create()
+        public ActionResult CreateTransaction()
         {
+            List<Item> items;
+            using (var ctx = new ApplicationDbContext())
+            {
+                items = ctx.Items.ToList();
+            }
+            ViewBag.Items = new SelectList(items, "ItemId", "ItemName");
             return View();
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create(TransactionCreate model)
-        //{
-        //    if (!ModelState.IsValid) return View(model);
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateTransaction(TransactionCreate model)
+        {
+            if (!ModelState.IsValid) return View(model);
 
-        //    var service = CreateItemService();
+            var service = CreateTransactionService();
 
-        //}
+            if (service.Create(model))
+            {
+                TempData["SaveResult"] = "Transaction Created.";
+                return RedirectToAction("Transaction");
+            }
+
+            ModelState.AddModelError("", "Transaction could not be created.");
+
+            return View(model);
+        }
+
+
     }
 }

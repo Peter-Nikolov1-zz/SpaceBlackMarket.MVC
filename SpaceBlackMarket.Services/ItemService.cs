@@ -31,16 +31,6 @@ namespace SpaceBlackMarket.Services
             }
         }
 
-        //public bool CreateTransaction(TransactionCreate model)
-        //{
-        //    var entity =
-        //        new Transaction()
-        //        {
-        //            DateOfPurchase = model.DateOfPurchase,
-        //            CreditsAmount = model.CreditsAmount,
-        //        }
-        //}
-
         public IEnumerable<ItemsList> GetItems()
         {
             using (var ctx = new ApplicationDbContext())
@@ -48,7 +38,7 @@ namespace SpaceBlackMarket.Services
                 var query =
                      ctx
                          .Items
-                         .Where(e => e.IsSold == false)
+                         //.Where(e => e.IsSold == false)
                          .Select(
                              e =>
                                  new ItemsList
@@ -119,6 +109,21 @@ namespace SpaceBlackMarket.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        //public bool RemoveItemAfterPurchase()
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var entity =
+        //            ctx
+        //                .Items
+        //                .Single(e => e.ItemId == itemId);
+
+        //        ctx.Items.Remove(entity);
+
+        //        return ctx.SaveChanges() == 1;
+        //    }
+        //}
 
     }
 }
