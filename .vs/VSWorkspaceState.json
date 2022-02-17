@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SpaceBlackMarket.Data",
     "\\SpaceBlackMarketMVC",
+    "\\SpaceBlackMarketMVC\\Controllers",
     "\\SpaceBlackMarketMVC\\Views",
     "\\SpaceBlackMarketMVC\\Views\\Account",
     "\\SpaceBlackMarketMVC\\Views\\Item",
@@ -11,6 +11,6 @@
     "\\SpaceBlackMarketMVC\\Views\\Shared",
     "\\SpaceBlackMarketMVC\\Views\\Transaction"
   ],
-  "SelectedNode": "\\SpaceBlackMarketMVC\\Controllers\\ItemController.cs",
+  "SelectedNode": "\\SpaceBlackMarketMVC\\Views\\Transaction\\CreateTransaction.cshtml",
   "PreviewInSolutionExplorer": false
 }

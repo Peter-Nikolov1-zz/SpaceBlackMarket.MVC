@@ -111,11 +111,23 @@
     <Compile Include="Migrations\202202100139083_TransactionFKNowInItem.Designer.cs">
       <DependentUpon>202202100139083_TransactionFKNowInItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202160012078_RemovedTransaction.cs" />
+    <Compile Include="Migrations\202202160012078_RemovedTransaction.Designer.cs">
+      <DependentUpon>202202160012078_RemovedTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202160027134_PurchaseTableAdded.cs" />
+    <Compile Include="Migrations\202202160027134_PurchaseTableAdded.Designer.cs">
+      <DependentUpon>202202160027134_PurchaseTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202160120462_ChangedCreatedToPurchaseDate.cs" />
+    <Compile Include="Migrations\202202160120462_ChangedCreatedToPurchaseDate.Designer.cs">
+      <DependentUpon>202202160120462_ChangedCreatedToPurchaseDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.cs" />
     <Compile Include="SpaceTravelerProfile.cs" />
-    <Compile Include="Transaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -154,6 +166,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202100139083_TransactionFKNowInItem.resx">
       <DependentUpon>202202100139083_TransactionFKNowInItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202160012078_RemovedTransaction.resx">
+      <DependentUpon>202202160012078_RemovedTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202160027134_PurchaseTableAdded.resx">
+      <DependentUpon>202202160027134_PurchaseTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202160120462_ChangedCreatedToPurchaseDate.resx">
+      <DependentUpon>202202160120462_ChangedCreatedToPurchaseDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro"/></a>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro" /></a>
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item nav-link">
@@ -35,26 +35,37 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
+    </div>
+
+    <div class="footer fixed-bottom">
         <footer>
             <p>&copy; @DateTime.Now.Year - This isn't a black market</p>
         </footer>
     </div>
     <style>
-        .nav-item{
+
+        a {
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            position: relative;
+        }
+
+        .nav-item {
             text-decoration: none !important;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         a {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        #astro{
+        #astro {
             height: 80px;
             width: 80px;
         }
-
     </style>
 
     @Scripts.Render("~/bundles/jquery")

@@ -1,6 +1,5 @@
 ﻿using SpaceBlackMarket.Data;
 using SpaceBlackMarket.Models.ItemModels;
-using SpaceBlackMarket.Models.TransactionModels;
 using SpaceBlackMarketMVC.Data;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,6 @@ namespace SpaceBlackMarket.Services
             var entity =
                 new Item()
                 {
-                    //SpaceTravelerProfileId = model.SpaceTravelerProfileId,
                     ItemName = model.Name,
                     ItemPrice = model.Price,
                     ItemDescription = model.Description,

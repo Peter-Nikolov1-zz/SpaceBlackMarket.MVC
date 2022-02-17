@@ -35,9 +35,9 @@ namespace SpaceBlackMarket.Data
 
         public bool WillingToCooperate { get; set; }
 
-        [ForeignKey(nameof(Transaction))]
-        public int? TransactionId { get; set; }
+        [ForeignKey(nameof(Purchase))]
+        public int? PurchaseId { get; set; }
 
-        public virtual Transaction Transaction { get; set; }
+        public virtual Purchase Purchase { get; set; }
     }
 }

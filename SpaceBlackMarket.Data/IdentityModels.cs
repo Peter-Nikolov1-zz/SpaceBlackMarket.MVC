@@ -36,7 +36,7 @@ namespace SpaceBlackMarketMVC.Data
         public DbSet<Outpost> Outposts { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<SpaceTravelerProfile> SpaceTravelerProfile { get; set; }
-        public DbSet<Transaction> Transaction { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

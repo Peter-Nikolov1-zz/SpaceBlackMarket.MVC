@@ -22,14 +22,12 @@ namespace SpaceBlackMarket.Data
         public int ItemId { get; set; }
 
         [Required]
-
         public string ItemName { get; set; }
 
         [Required]
         public double ItemPrice { get; set; }
 
         [Required]
-
         public string ItemDescription { get; set; }
 
         [Required]
@@ -48,9 +46,9 @@ namespace SpaceBlackMarket.Data
         public int? SpaceTravelerProfileId { get; set; }
         public virtual SpaceTravelerProfile SpaceTravelerProfile { get; set; }
 
-        [ForeignKey(nameof(Transaction))]
-        public int? TransactionId { get; set; }
+        [ForeignKey(nameof(Purchase))]
+        public int? PurchaseId { get; set; }
 
-        public virtual Transaction Transaction { get; set; }
+        public virtual Purchase Purchase { get; set; }
     }
 }

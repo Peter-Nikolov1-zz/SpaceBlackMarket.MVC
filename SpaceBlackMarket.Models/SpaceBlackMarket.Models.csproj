@@ -75,13 +75,13 @@
     <Compile Include="OutpostModels\OutpostList.cs" />
     <Compile Include="ProfilePage\ProfileEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseModels\PurchaseItem.cs" />
+    <Compile Include="PurchaseModels\PurchaseList.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerCreate.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerDetail.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerEdit.cs" />
     <Compile Include="SpaceTravelerModels\SpaceTravelerList.cs" />
     <Compile Include="ProfilePage\SpaceTravelerProfilePage.cs" />
-    <Compile Include="TransactionModels\TransactionCreate.cs" />
-    <Compile Include="TransactionModels\TransactionList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

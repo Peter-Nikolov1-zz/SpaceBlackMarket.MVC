@@ -1,25 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SpaceBlackMarket.Data
 {
-    public class Transaction
+    public class Purchase
     {
         [Key]
-        public int TransactionId { get; set; }
+        public int PurchaseId { get; set; }
 
         [Required]
-        public DateTime DateOfPurchase { get; set; }
+        public double PurchaseTotal { get; set; }
 
         [Required]
-        public double CreditsAmount { get; set; }
-
-
+        public DateTimeOffset PurchaseDate { get; set; }
 
     }
 }
