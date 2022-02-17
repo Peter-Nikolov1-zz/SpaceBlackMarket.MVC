@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Place Doesn't Exist</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro" /></a>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item nav-link">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li class="nav-item nav-link">
+                        @Html.ActionLink("Outposts", "Index", "Outpost")
+                    </li>
+                    <li class="nav-item nav-link">
+                        @Html.ActionLink("Roles", "Index", "Roles")
+                    </li>
+                    <li class="nav-item nav-link">
+                        @Html.ActionLink("Available Inventory", "Index", "Item")
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <div class="footer fixed-bottom">
+        <footer>
+            <p>&copy; @DateTime.Now.Year - This isn't a black market</p>
+        </footer>
+    </div>
+    <style>
+
+        a {
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            position: relative;
+        }
+
+        .nav-item {
+            text-decoration: none !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #astro {
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

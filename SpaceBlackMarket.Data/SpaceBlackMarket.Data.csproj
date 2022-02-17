@@ -67,61 +67,9 @@
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Migrations\202202020117402_InitialCreate.cs" />
-    <Compile Include="Migrations\202202020117402_InitialCreate.Designer.cs">
-      <DependentUpon>202202020117402_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202020149236_FirstMigration.cs" />
-    <Compile Include="Migrations\202202020149236_FirstMigration.Designer.cs">
-      <DependentUpon>202202020149236_FirstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202040013383_SpaceTravelerIsNowNullable.cs" />
-    <Compile Include="Migrations\202202040013383_SpaceTravelerIsNowNullable.Designer.cs">
-      <DependentUpon>202202040013383_SpaceTravelerIsNowNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202040124240_DangerLevelIsEnum.cs" />
-    <Compile Include="Migrations\202202040124240_DangerLevelIsEnum.Designer.cs">
-      <DependentUpon>202202040124240_DangerLevelIsEnum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202041724522_AddedOutpostIdToModel.cs" />
-    <Compile Include="Migrations\202202041724522_AddedOutpostIdToModel.Designer.cs">
-      <DependentUpon>202202041724522_AddedOutpostIdToModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.cs" />
-    <Compile Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.Designer.cs">
-      <DependentUpon>202202050603103_RenamedSystCoordsToPlanetName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202060540071_FirstSeededOutpost.cs" />
-    <Compile Include="Migrations\202202060540071_FirstSeededOutpost.Designer.cs">
-      <DependentUpon>202202060540071_FirstSeededOutpost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202060602377_OutpostSeedandItemSeed.cs" />
-    <Compile Include="Migrations\202202060602377_OutpostSeedandItemSeed.Designer.cs">
-      <DependentUpon>202202060602377_OutpostSeedandItemSeed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202070055441_RolesCreated.cs" />
-    <Compile Include="Migrations\202202070055441_RolesCreated.Designer.cs">
-      <DependentUpon>202202070055441_RolesCreated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202100051417_AddedTransactionInDataLayer.cs" />
-    <Compile Include="Migrations\202202100051417_AddedTransactionInDataLayer.Designer.cs">
-      <DependentUpon>202202100051417_AddedTransactionInDataLayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202100139083_TransactionFKNowInItem.cs" />
-    <Compile Include="Migrations\202202100139083_TransactionFKNowInItem.Designer.cs">
-      <DependentUpon>202202100139083_TransactionFKNowInItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202160012078_RemovedTransaction.cs" />
-    <Compile Include="Migrations\202202160012078_RemovedTransaction.Designer.cs">
-      <DependentUpon>202202160012078_RemovedTransaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202160027134_PurchaseTableAdded.cs" />
-    <Compile Include="Migrations\202202160027134_PurchaseTableAdded.Designer.cs">
-      <DependentUpon>202202160027134_PurchaseTableAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202160120462_ChangedCreatedToPurchaseDate.cs" />
-    <Compile Include="Migrations\202202160120462_ChangedCreatedToPurchaseDate.Designer.cs">
-      <DependentUpon>202202160120462_ChangedCreatedToPurchaseDate.cs</DependentUpon>
+    <Compile Include="Migrations\202202170252081_InitialMigration.cs" />
+    <Compile Include="Migrations\202202170252081_InitialMigration.Designer.cs">
+      <DependentUpon>202202170252081_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
@@ -134,51 +82,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202020117402_InitialCreate.resx">
-      <DependentUpon>202202020117402_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202020149236_FirstMigration.resx">
-      <DependentUpon>202202020149236_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202040013383_SpaceTravelerIsNowNullable.resx">
-      <DependentUpon>202202040013383_SpaceTravelerIsNowNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202040124240_DangerLevelIsEnum.resx">
-      <DependentUpon>202202040124240_DangerLevelIsEnum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202041724522_AddedOutpostIdToModel.resx">
-      <DependentUpon>202202041724522_AddedOutpostIdToModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202050603103_RenamedSystCoordsToPlanetName.resx">
-      <DependentUpon>202202050603103_RenamedSystCoordsToPlanetName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202060540071_FirstSeededOutpost.resx">
-      <DependentUpon>202202060540071_FirstSeededOutpost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202060602377_OutpostSeedandItemSeed.resx">
-      <DependentUpon>202202060602377_OutpostSeedandItemSeed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202070055441_RolesCreated.resx">
-      <DependentUpon>202202070055441_RolesCreated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202100051417_AddedTransactionInDataLayer.resx">
-      <DependentUpon>202202100051417_AddedTransactionInDataLayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202100139083_TransactionFKNowInItem.resx">
-      <DependentUpon>202202100139083_TransactionFKNowInItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202160012078_RemovedTransaction.resx">
-      <DependentUpon>202202160012078_RemovedTransaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202160027134_PurchaseTableAdded.resx">
-      <DependentUpon>202202160027134_PurchaseTableAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202160120462_ChangedCreatedToPurchaseDate.resx">
-      <DependentUpon>202202160120462_ChangedCreatedToPurchaseDate.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\PagedList.css" />
+    <EmbeddedResource Include="Migrations\202202170252081_InitialMigration.resx">
+      <DependentUpon>202202170252081_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />

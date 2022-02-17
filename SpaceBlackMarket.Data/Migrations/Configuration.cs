@@ -1,6 +1,5 @@
 namespace SpaceBlackMarket.Data.Migrations
 {
-    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -11,7 +10,6 @@ namespace SpaceBlackMarket.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "SpaceBlackMarketMVC.Data.ApplicationDbContext";
         }
 
         protected override void Seed(SpaceBlackMarketMVC.Data.ApplicationDbContext context)
@@ -36,6 +34,7 @@ namespace SpaceBlackMarket.Data.Migrations
                 new SpaceTravelerProfile() { TravelerAlias = "Weirdo Son", Credits = 1462.94, WantedLevel = WantedLevel.GalacticFedsWantThem, WillingToCooperate = false },
                 new SpaceTravelerProfile() { TravelerAlias = "Squirrel", Credits = 2624, WantedLevel = WantedLevel.HighlyDesired, WillingToCooperate = true });
             context.SaveChanges();
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
