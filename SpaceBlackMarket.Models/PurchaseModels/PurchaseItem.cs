@@ -9,12 +9,12 @@ namespace SpaceBlackMarket.Models.PurchaseModels
 {
     public class PurchaseItem
     {
-        public int ItemId { get; set; }
-
         [Required]
+        [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
         [Required]
+        [Display(Name = "Item Price")]
         public double ItemPrice { get; set; }
 
     }

@@ -34,6 +34,10 @@ namespace SpaceBlackMarketMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IdentityRole role)
         {
+            if(role == null)
+            {
+                return View(role);
+            }
             context.Roles.Add(role);
             context.SaveChanges();
             return RedirectToAction("Index");

@@ -15,8 +15,6 @@ namespace SpaceBlackMarketMVC.Controllers
 
     public class ItemController : Controller
     {
-        ApplicationDbContext _db = new ApplicationDbContext();
-
         // GET: Item
         public ActionResult Index()
         {
@@ -62,7 +60,7 @@ namespace SpaceBlackMarketMVC.Controllers
 
         private ItemService CreateItemService()
         {
-            //var userId = Guid.Parse(User.Identity.GetUserId());
+            var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ItemService();
             return service;
         }

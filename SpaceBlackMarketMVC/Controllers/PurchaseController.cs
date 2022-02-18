@@ -23,26 +23,18 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
-        public ActionResult CreateAPurchase()
+        public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateAPurchase(int id, PurchaseItem model)
+        public ActionResult Create(int id)
         {
-            if (!ModelState.IsValid) return View(model);
-
-            if(model.ItemId != id)
-            {
-                ModelState.AddModelError("", "Id mismatch");
-                return View(model);
-            }
-
             var service = CreatePurchaseService();
 
-            if (service.PurchaseItem(model))
+            if (service.PurchaseItem(id))
             {
                 TempData["SaveResult"] = "Item Purchased";
                 return RedirectToAction("Index", "Item");

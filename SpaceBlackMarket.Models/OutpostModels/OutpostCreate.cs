@@ -23,6 +23,7 @@ namespace SpaceBlackMarket.Models.OutpostModels
         public string GalaxyName { get; set; }
 
         [Required]
+        [Display(Name = "Planet Name?")]
         public string PlanetName { get; set; }
 
         [Required]

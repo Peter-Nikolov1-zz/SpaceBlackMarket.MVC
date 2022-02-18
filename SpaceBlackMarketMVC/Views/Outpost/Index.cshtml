@@ -4,20 +4,27 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h4>Below is a list of all the currently known Outposts in the surrounding systems.</h4>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
-    <div class="alert alert-success fade in" role="alert">
+    <div class="alert alert-success" role="alert" id="alertPopup">
         <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
         </button>
         @TempData["SaveResult"]
     </div>
 }
+
+<style>
+    #alertPopup{
+        width: 200px;
+    }
+</style>
+
 <table class="table">
     <tr>
         <th>
@@ -65,3 +72,5 @@
     }
 
 </table>
+
+

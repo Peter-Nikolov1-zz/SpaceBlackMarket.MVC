@@ -19,37 +19,43 @@ namespace SpaceBlackMarket.Services
             _userId = userId;
         }
 
-        public bool PurchaseItem(PurchaseItem model)
+        public bool PurchaseItem(int id)
         {
-            var entity =
-                new Item()
-                {
-                    ItemId = model.ItemId,
-                    ItemName = model.ItemName,
-                    ItemPrice = model.ItemPrice
-                };
-
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Items.Add(entity);
-                return ctx.SaveChanges() == 1;
+                var item =
+                    ctx
+                        .Items
+                        .Single(e => e.ItemId == id);
+
+                var profile =
+                    ctx
+                        .SpaceTravelerProfile
+                        .Single(e => e.OwnerId == _userId);
+
+                item.SpaceTravelerProfileId = profile.SpaceTravelerProfileId;
+                item.IsSold = true;
+                ctx.SaveChanges();
+
+                var newBalance = profile.Credits - item.ItemPrice;
+                profile.Credits = newBalance;
+                return ctx.SaveChanges() >= 1;
             }
         }
 
-        public ItemDetail PurchaseItemById(int id)
+        public PurchaseItem PurchaseItemById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity =
+                var item =
                     ctx
                         .Items
                         .Single(e => e.ItemId == id);
                 return
-                    new ItemDetail
+                    new PurchaseItem
                     {
-                        ItemId = entity.ItemId,
-                        ItemName = entity.ItemName,
-                        ItemPrice = entity.ItemPrice
+                        ItemName = item.ItemName,
+                        ItemPrice = item.ItemPrice
                     };
             }
         }

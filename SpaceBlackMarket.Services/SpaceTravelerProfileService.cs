@@ -109,7 +109,6 @@ namespace SpaceBlackMarket.Services
                         new SpaceTravelerDetail
                         {
                             SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
-                            OwnerId = entity.OwnerId,
                             TravelerAlias = entity.TravelerAlias,
                             Credits = entity.Credits,
                             WantedLevel = entity.WantedLevel,
@@ -130,6 +129,7 @@ namespace SpaceBlackMarket.Services
                         new SpaceTravelerProfilePage
                         {
                             SpaceTravelerProfileId = entity.SpaceTravelerProfileId,
+                            OwnerId = entity.OwnerId,
                             TravelerAlias = entity.TravelerAlias,
                             Credits = entity.Credits,
                             WantedLevel = entity.WantedLevel,

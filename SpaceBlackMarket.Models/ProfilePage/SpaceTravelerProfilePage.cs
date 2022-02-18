@@ -11,6 +11,8 @@ namespace SpaceBlackMarket.Models.SpaceTravelerModels
     {
         public int SpaceTravelerProfileId { get; set; }
 
+        public Guid OwnerId { get; set; }
+
         public string TravelerAlias { get; set; }
 
         public double Credits { get; set; }

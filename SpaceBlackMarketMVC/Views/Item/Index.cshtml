@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Items currently available on the Black Market.</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -17,16 +17,9 @@
     </div>
 }
 
-<style>
-    #alertPopup{
-        width: 200px;
-    }
-</style>
+
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemId) 
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.ItemName)
         </th>
@@ -36,14 +29,14 @@
         <th>
             @Html.DisplayNameFor(model => model.ItemDescription)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSold)
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ItemId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ItemName)
             </td>
@@ -54,11 +47,20 @@
                 @Html.DisplayFor(modelItem => item.ItemDescription)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.IsSold)
+            </td>
+            <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
             </td>
         </tr>
     }
-
 </table>
+
+<style>
+    #alertPopup {
+        width: 200px;
+    }
+</style>
+
