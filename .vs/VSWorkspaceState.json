@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\SpaceBlackMarket.Models",
+    "\\SpaceBlackMarket.Models\\OutpostModels",
+    "\\SpaceBlackMarket.Models\\ProfilePage",
+    "\\SpaceBlackMarket.Models\\SpaceTravelerModels",
     "\\SpaceBlackMarketMVC",
-    "\\SpaceBlackMarketMVC\\Controllers",
+    "\\SpaceBlackMarketMVC\\App_Start",
     "\\SpaceBlackMarketMVC\\Views",
-    "\\SpaceBlackMarketMVC\\Views\\Account",
-    "\\SpaceBlackMarketMVC\\Views\\Item",
-    "\\SpaceBlackMarketMVC\\Views\\Manage",
-    "\\SpaceBlackMarketMVC\\Views\\Outpost",
-    "\\SpaceBlackMarketMVC\\Views\\Shared",
-    "\\SpaceBlackMarketMVC\\Views\\Transaction"
+    "\\SpaceBlackMarketMVC\\Views\\Roles",
+    "\\SpaceBlackMarketMVC\\Views\\SpaceTravelerProfilePage"
   ],
-  "SelectedNode": "\\SpaceBlackMarketMVC\\Views\\Transaction\\CreateTransaction.cshtml",
+  "SelectedNode": "\\SpaceBlackMarketMVC\\Views\\Shared\\_LoginPartial.cshtml",
   "PreviewInSolutionExplorer": false
 }

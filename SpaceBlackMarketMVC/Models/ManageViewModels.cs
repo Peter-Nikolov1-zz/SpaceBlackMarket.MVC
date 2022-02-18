@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
 namespace SpaceBlackMarketMVC.Models
-{
+{ 
     public class IndexViewModel
     {
         public bool HasPassword { get; set; }

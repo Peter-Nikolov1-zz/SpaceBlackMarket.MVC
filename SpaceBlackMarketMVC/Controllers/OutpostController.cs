@@ -8,9 +8,10 @@ using System.Web.Mvc;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
-    [Authorize]
+    
     public class OutpostController : Controller
     {
+        [Authorize(Roles = "Admin, User")]
         // GET: Outpost
         public ActionResult Index()
         {
@@ -25,6 +26,7 @@ namespace SpaceBlackMarketMVC.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin, User")]
         // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -53,6 +55,7 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             var service = new OutpostService();
@@ -69,6 +72,7 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, OutpostEdit model)
@@ -93,6 +97,7 @@ namespace SpaceBlackMarketMVC.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -102,6 +107,7 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

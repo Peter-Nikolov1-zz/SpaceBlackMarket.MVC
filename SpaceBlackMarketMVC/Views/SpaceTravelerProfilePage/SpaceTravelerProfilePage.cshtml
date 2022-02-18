@@ -1,0 +1,58 @@
+﻿@model SpaceBlackMarket.Models.SpaceTravelerModels.SpaceTravelerProfilePage
+
+@{
+    ViewBag.Title = "SpaceTravelerProfilePage";
+}
+
+<h2>SpaceTravelerProfilePage</h2>
+
+<div>
+    <h4>SpaceTravelerProfilePage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpaceTravelerProfileId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpaceTravelerProfileId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelerAlias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TravelerAlias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WillingToCooperate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WillingToCooperate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

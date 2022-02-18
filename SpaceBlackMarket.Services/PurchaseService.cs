@@ -43,6 +43,25 @@ namespace SpaceBlackMarket.Services
             }
         }
 
+        public IEnumerable<PurchaseList> GetPurchases()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Purchases
+                        .Select(
+                            e =>
+                                new PurchaseList
+                                {
+                                    PurchaseTotal = e.PurchaseTotal,
+                                    PurchaseDate = e.PurchaseDate
+                                }
+                       );
+                return query.ToArray();
+            }
+        }
+
         public PurchaseItem PurchaseItemById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -60,23 +79,22 @@ namespace SpaceBlackMarket.Services
             }
         }
 
-        public IEnumerable<PurchaseList> GetPurchases()
+
+
+        public PurchaseDetail GetPurchaseById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var entity =
                     ctx
                         .Purchases
-                        .Select(
-                            e =>
-                                new PurchaseList
-                                {
-                                    PurchaseId = e.PurchaseId,
-                                    PurchaseTotal = e.PurchaseTotal,
-                                    PurchaseDate = e.PurchaseDate
-                                }
-                       );
-                return query.ToArray();
+                        .Single(e => e.PurchaseId == id);
+                return
+                    new PurchaseDetail
+                    {
+                        PurchaseId = entity.PurchaseId,
+                        PurchaseTotal = entity.PurchaseTotal,
+                    };
             }
         }
     }

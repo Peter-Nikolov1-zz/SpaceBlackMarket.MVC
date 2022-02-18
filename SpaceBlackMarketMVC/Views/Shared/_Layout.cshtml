@@ -3,45 +3,49 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This Place Doesn't Exist</title>
+    <title>Space Black Market</title>
+    <link rel="icon" href="~/icon.ico.png" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Please Select An Option
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li class="dropdown-item"> @Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="dropdown-item"> @Html.ActionLink("Outposts", "Index", "Outpost")</li>
-                            <li class="dropdown-item"> @Html.ActionLink("Roles", "Index", "Roles")</li>
-                            <li class="dropdown-item"> @Html.ActionLink("The Market", "Index", "Item")</li>
-                        </ul>
-                    </li>
-                </ul>
+    @if (Request.IsAuthenticated)
+    {
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li class="dropdown-item"> @Html.ActionLink("Home", "Index", "Home")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("Outposts", "Index", "Outpost")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("Roles", "Index", "Roles")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("The Market", "Index", "Item")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="loginPartial">
             @Html.Partial("_LoginPartial")
-        </div>
-    </nav>
+        </nav>
+
+    }
 
     <br />
 
     <div class="container body-content">
         @RenderBody()
     </div>
+
 
     <div>
         <footer class="footer fixed-bottom">
@@ -50,7 +54,9 @@
     </div>
     <style>
 
-        #navbarDarkDropdownMenuLink{
+
+
+        #navbarDarkDropdownMenuLink {
             background-color: gray;
         }
 
@@ -64,16 +70,12 @@
             transition: transform 0.4s;
         }
 
-        .dropdown-menu:hover{
-            transform: 
-        }
-
         .navbar {
             background-image: url(/Content/Image/MilkyWayNav.jpg)
         }
 
         body {
-            width: 100vw;
+            width: 100%;
             height: 100vh;
         }
 
@@ -83,11 +85,12 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        a:hover{
-            color: white;
-        }
+            a:hover {
+                color: white;
+            }
 
         .footer {
+            position: sticky;
             text-align: center;
         }
 
@@ -110,6 +113,8 @@
                 transform: scale(1.2);
             }
     </style>
+
+
 
     @RenderSection("scripts", required: false)
 

@@ -9,8 +9,8 @@ namespace SpaceBlackMarket.Models.PurchaseModels
 {
     public class PurchaseList
     {
-        [Display(Name = "Purchase Id")]
-        public int PurchaseId { get; set; }
+        [Display(Name = "Item Purchased")]
+        public string ItemName { get; set; }
 
         [Display(Name = "Purchase Total")]
         public double PurchaseTotal { get; set; }

@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
+    [Authorize(Roles = "Admin, User")]
     public class PurchaseController : Controller
     {
         // GET: Purchase
@@ -31,17 +32,25 @@ namespace SpaceBlackMarketMVC.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(int id)
-        {
+        { 
             var service = CreatePurchaseService();
 
             if (service.PurchaseItem(id))
             {
-                TempData["SaveResult"] = "Item Purchased";
-                return RedirectToAction("Index", "Item");
+                TempData["SaveResult"] = "Item Purchased, Credits Deducted";
+                return RedirectToAction("Index", "Purchase");
             }
 
             ModelState.AddModelError("", "Item could not be purchased.");
             return View();
+        }
+
+        public ActionResult Details(int id)
+        {
+            var service = CreatePurchaseService();
+            var model = service.GetPurchaseById(id);
+
+            return View(model);
         }
 
         private PurchaseService CreatePurchaseService()

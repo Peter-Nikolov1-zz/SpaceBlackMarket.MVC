@@ -209,11 +209,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Image\astronaut.png" />
     <Content Include="Content\Image\MilkyWayNav.jpg" />
-    <Content Include="Content\Image\Rocket.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\site.css" />
+    <Content Include="icon.ico.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -308,11 +308,12 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
-    <Content Include="Views\SpaceTravelerProfilePage\TravelerProfile.cshtml" />
     <Content Include="Views\SpaceTravelerProfilePage\EditProfile.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
     <Content Include="Views\Purchase\Index.cshtml" />
+    <Content Include="Views\SpaceTravelerProfilePage\SpaceTravelerProfilePage.cshtml" />
     <Content Include="Views\Purchase\Create.cshtml" />
+    <Content Include="Views\Purchase\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

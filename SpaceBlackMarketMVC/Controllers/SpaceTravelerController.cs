@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, User")]
     public class SpaceTravelerController : Controller
     {
         // GET: SpaceTraveler
@@ -39,11 +39,11 @@ namespace SpaceBlackMarketMVC.Controllers
 
             var service = CreateSpaceTravelerService();
 
-            //if (service.UserOwnsProfile())
-            //{
-            //    TempData["ExceededProfileCount"] = "You already have a profile.";
-            //    return View(model);
-            //};
+            if (service.UserOwnsProfile())
+            {
+                TempData["ExceededProfileCount"] = "You already have a profile.";
+                return View(model);
+            };
 
             if (service.CreateSpaceTraveler(model)) 
             {
