@@ -79,3 +79,5 @@ C:\Users\nikol\OneDrive\Desktop\RedBadge\RedBadgeFinalProject\SpaceBlackMarket.D
 C:\Users\nikol\OneDrive\Desktop\RedBadge\RedBadgeFinalProject\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.CopyComplete
 C:\Users\nikol\OneDrive\Desktop\RedBadge\RedBadgeFinalProject\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.dll
 C:\Users\nikol\OneDrive\Desktop\RedBadge\RedBadgeFinalProject\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.pdb
+C:\Users\nikol\OneDrive\Desktop\RedBadge\RedBadgeFinalProject\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.csproj.AssemblyReference.cache
+C:\Users\nikol\OneDrive\Desktop\RedBadge\RedBadgeFinalProject\SpaceBlackMarket.Data\obj\Debug\SpaceBlackMarket.Data.Migrations.AddedItemToPurchase.resources

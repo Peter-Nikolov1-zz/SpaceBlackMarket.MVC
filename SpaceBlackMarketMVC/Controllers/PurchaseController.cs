@@ -24,25 +24,38 @@ namespace SpaceBlackMarketMVC.Controllers
             return View(model);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            return View();
+            var service = new ItemService();
+            var item = service.GetItemById(id);
+
+            var purchase = new PurchaseItem();
+
+            purchase.ItemId = item.ItemId;
+            purchase.ItemName = item.ItemName;
+            purchase.ItemPrice = item.ItemPrice;
+
+            return View(purchase);
+        }
+
+        public ActionResult CreatePurchase(int id)
+        {
+            CreatePost(id);
+            return RedirectToAction("Index", "Purchase");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(int id)
+        public void CreatePost(int id)
         { 
             var service = CreatePurchaseService();
 
             if (service.PurchaseItem(id))
             {
                 TempData["SaveResult"] = "Item Purchased, Credits Deducted";
-                return RedirectToAction("Index", "Purchase");
             }
 
             ModelState.AddModelError("", "Item could not be purchased.");
-            return View();
         }
 
         public ActionResult Details(int id)

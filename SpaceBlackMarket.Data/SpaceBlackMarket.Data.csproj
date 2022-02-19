@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202202170252081_InitialMigration.Designer.cs">
       <DependentUpon>202202170252081_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202190513123_AddedItemToPurchase.cs" />
+    <Compile Include="Migrations\202202190513123_AddedItemToPurchase.designer.cs">
+      <DependentUpon>202202190513123_AddedItemToPurchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Outpost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +92,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202202170252081_InitialMigration.resx">
       <DependentUpon>202202170252081_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202190513123_AddedItemToPurchase.resx">
+      <DependentUpon>202202190513123_AddedItemToPurchase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,19 +1,18 @@
 ﻿@model SpaceBlackMarket.Models.OutpostModels.OutpostCreate
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create an Outpost";
 }
 
-<h2>Create</h2>
+<h3>Create an Outpost</h3>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>OutpostCreate</h4>
-        <hr />
+        <h4>Please provide information on the Outpost you are wanting to list. </h4>
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.OutpostName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -23,6 +22,8 @@
             </div>
         </div>
 
+        <br />
+
         <div class="form-group">
             @Html.LabelFor(model => model.GalaxyName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -30,6 +31,8 @@
                 @Html.ValidationMessageFor(model => model.GalaxyName, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <br />
 
         <div class="form-group">
             @Html.LabelFor(model => model.PlanetName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -39,6 +42,8 @@
             </div>
         </div>
 
+        <br />
+
         <div class="form-group">
             @Html.LabelFor(model => model.DangerLevel, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -47,13 +52,36 @@
             </div>
         </div>
 
+        <br />
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
+
+    <br />
 }
+
+<style>
+
+    
+
+    .form-control {
+        background-color: whitesmoke;
+    }
+
+    .btn-default {
+        color: black;
+        background-color: white;
+    }
+
+        .btn-default:hover {
+            color: white;
+            background-color: gray;
+        }
+</style>
 
 <div>
     @Html.ActionLink("Back to List", "Index")

@@ -10,7 +10,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     @if (Request.IsAuthenticated)
     {
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,6 +30,7 @@
                                 <li class="dropdown-item"> @Html.ActionLink("Outposts", "Index", "Outpost")</li>
                                 <li class="dropdown-item"> @Html.ActionLink("Roles", "Index", "Roles")</li>
                                 <li class="dropdown-item"> @Html.ActionLink("The Market", "Index", "Item")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("About Us", "About", "Home")</li>
                             </ul>
                         </li>
                     </ul>
@@ -54,18 +55,21 @@
     </div>
     <style>
 
-
+        footer {
+            text-align: center;
+        }
 
         #navbarDarkDropdownMenuLink {
-            background-color: gray;
+            background-color: black;
+        }
+
+        #navbarDarkDropdownMenuLink:hover {
+            background-color: #bdbcbc;
+            color: black;
         }
 
         .dropdown-item {
-            background-color: gray;
-        }
-
-        .dropdown-menu {
-            padding: 10px;
+            padding: 5px;
             text-align: center;
             transition: transform 0.4s;
         }
@@ -75,7 +79,6 @@
         }
 
         body {
-            width: 100%;
             height: 100vh;
         }
 
@@ -88,11 +91,6 @@
             a:hover {
                 color: white;
             }
-
-        .footer {
-            position: sticky;
-            text-align: center;
-        }
 
         .nav-item {
             text-decoration: none !important;

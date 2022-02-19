@@ -207,8 +207,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Image\Alien.jpg" />
     <Content Include="Content\Image\astronaut.png" />
     <Content Include="Content\Image\MilkyWayNav.jpg" />
+    <Content Include="Content\Image\Outpost.jpg" />
+    <Content Include="Content\Image\SBM_Origin.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -312,8 +315,8 @@
     <Content Include="Views\Roles\Delete.cshtml" />
     <Content Include="Views\Purchase\Index.cshtml" />
     <Content Include="Views\SpaceTravelerProfilePage\SpaceTravelerProfilePage.cshtml" />
-    <Content Include="Views\Purchase\Create.cshtml" />
     <Content Include="Views\Purchase\Details.cshtml" />
+    <Content Include="Views\Purchase\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

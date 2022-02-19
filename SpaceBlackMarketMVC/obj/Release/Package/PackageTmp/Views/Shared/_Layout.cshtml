@@ -3,73 +3,118 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This Place Doesn't Exist</title>
+    <title>Space Black Market</title>
+    <link rel="icon" href="~/icon.ico.png" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 </head>
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro" /></a>
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item nav-link">
-                        @Html.ActionLink("Home", "Index", "Home")
-                    </li>
-                    <li class="nav-item nav-link">
-                        @Html.ActionLink("Outposts", "Index", "Outpost")
-                    </li>
-                    <li class="nav-item nav-link">
-                        @Html.ActionLink("Roles", "Index", "Roles")
-                    </li>
-                    <li class="nav-item nav-link">
-                        @Html.ActionLink("Available Inventory", "Index", "Item")
-                    </li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+<body class="d-flex flex-column min-vh-100">
+    @if (Request.IsAuthenticated)
+    {
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Content/Image/astronaut.png" id="astro" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li class="dropdown-item"> @Html.ActionLink("Home", "Index", "Home")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("Outposts", "Index", "Outpost")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("Roles", "Index", "Roles")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("The Market", "Index", "Item")</li>
+                                <li class="dropdown-item"> @Html.ActionLink("About Us", "About", "Home")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+            @Html.Partial("_LoginPartial")
+        </nav>
+
+    }
+
+    <br />
 
     <div class="container body-content">
         @RenderBody()
     </div>
 
-    <div class="footer fixed-bottom">
-        <footer>
+
+    <div>
+        <footer class="footer fixed-bottom">
             <p>&copy; @DateTime.Now.Year - This isn't a black market</p>
         </footer>
     </div>
     <style>
 
-        a {
-            text-decoration: none;
+        footer {
+            text-align: center;
         }
 
-        .footer {
-            text-align: center;
-            position: relative;
+        #navbarDarkDropdownMenuLink {
+            background-color: black;
         }
+
+        #navbarDarkDropdownMenuLink:hover {
+            background-color: #bdbcbc;
+            color: black;
+        }
+
+        .dropdown-item {
+            padding: 5px;
+            text-align: center;
+            transition: transform 0.4s;
+        }
+
+        .navbar {
+            background-image: url(/Content/Image/MilkyWayNav.jpg)
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+            a:hover {
+                color: white;
+            }
 
         .nav-item {
             text-decoration: none !important;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: transparent;
         }
 
-        a {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
 
         #astro {
-            height: 80px;
-            width: 80px;
+            height: 50px;
+            width: 50px;
+            transition: transform .4s;
+            top: 0;
+            position: relative;
         }
+
+            #astro:hover {
+                transform: scale(1.2);
+            }
     </style>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+
+
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

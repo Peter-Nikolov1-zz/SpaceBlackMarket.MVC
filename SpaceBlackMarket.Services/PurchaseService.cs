@@ -19,19 +19,38 @@ namespace SpaceBlackMarket.Services
             _userId = userId;
         }
 
+        public bool CreatePurchase(Item item)
+        {
+            var entity =
+                new Purchase()
+                {
+                    PurchaseDate = DateTime.Now,
+                    PurchaseTotal = item.ItemPrice,
+                };
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Purchases.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
         public bool PurchaseItem(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
+
                 var item =
                     ctx
                         .Items
-                        .Single(e => e.ItemId == id);
+                        .SingleOrDefault(e => e.ItemId == id);
+
+                CreatePurchase(item);
 
                 var profile =
                     ctx
                         .SpaceTravelerProfile
-                        .Single(e => e.OwnerId == _userId);
+                        .SingleOrDefault(e => e.OwnerId == _userId);
 
                 item.SpaceTravelerProfileId = profile.SpaceTravelerProfileId;
                 item.IsSold = true;
@@ -78,8 +97,6 @@ namespace SpaceBlackMarket.Services
                     };
             }
         }
-
-
 
         public PurchaseDetail GetPurchaseById(int id)
         {

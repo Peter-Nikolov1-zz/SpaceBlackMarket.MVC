@@ -3,14 +3,56 @@
 }
 
 <div class="jumbotron">
-    <h1 class="mainText">Welcome to The Place That <b>Never</b> Existed</h1>
-    <p class="lead">You didn't find this place on accident. You're here looking for something aren't you? Perhaps, someone? You know the rules. Keep your mouth shut and we won't have any problems. Come here to do your business and leave.</p>
+    <h3 class="mainText">Welcome to the Space Black Market!</h3>
+</div>
+
+<br />
+
+<div class="cardContainer">
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/Image/SBM_Origin.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Just like Apple, the Space Black Market was once just an idea in a shed.</p>
+            <button class="btn btn-primary">@Html.ActionLink("Learn About Us", "About", "Home")</button>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/Image/Alien.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Wanna buy illegal stuff?</p>
+            <button class="btn btn-primary">@Html.ActionLink("Illegal Stuff", "Index", "Item")</button>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/Image/Outpost.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">View known Outposts.</p>
+            <button class="btn btn-primary">@Html.ActionLink("Outposts", "Index", "Outpost")</button>
+        </div>
+    </div>
 </div>
 
 <style>
-    .jumbotron{
-        padding: 5%;
+
+    .cardContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
-    
+    .mainText {
+        text-align: center;
+    }
+
+    .btn-default {
+        color: black;
+        background-color: white;
+    }
+
+        .btn-default:hover {
+            color: white;
+            background-color: gray;
+        }
 </style>

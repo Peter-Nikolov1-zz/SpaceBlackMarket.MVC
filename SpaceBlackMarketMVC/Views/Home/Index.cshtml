@@ -6,8 +6,53 @@
     <h3 class="mainText">Welcome to the Space Black Market!</h3>
 </div>
 
+<br />
+
+<div class="cardContainer">
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/Image/SBM_Origin.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Just like Apple, the Space Black Market was once just an idea in a shed.</p>
+            <button class="btn btn-primary">@Html.ActionLink("Learn About Us", "About", "Home")</button>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/Image/Alien.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Wanna buy illegal space stuff? View available Items on our market at the moment.</p>
+            <button class="btn btn-primary">@Html.ActionLink("Illegal Stuff", "Index", "Item")</button>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/Image/Outpost.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Need somewhere to run to? Trying to flee someone? View known Outposts.</p>
+            <button class="btn btn-primary">@Html.ActionLink("Outposts", "Index", "Outpost")</button>
+        </div>
+    </div>
+</div>
+
 <style>
-    .mainText{
+
+    .cardContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .mainText {
         text-align: center;
     }
+
+    .btn-default {
+        color: black;
+        background-color: white;
+    }
+
+        .btn-default:hover {
+            color: white;
+            background-color: gray;
+        }
 </style>
