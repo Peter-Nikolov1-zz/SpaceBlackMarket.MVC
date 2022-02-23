@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class RolesController : Controller
     {
         readonly ApplicationDbContext context = new ApplicationDbContext();

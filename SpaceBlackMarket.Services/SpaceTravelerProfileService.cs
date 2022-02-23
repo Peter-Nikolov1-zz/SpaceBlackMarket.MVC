@@ -20,20 +20,6 @@ namespace SpaceBlackMarket.Services
             _userId = userId;
         }
 
-        public bool UserOwnsProfile()
-        {
-            
-            var users = GetSpaceTravelers();
-            users = users.ToList();
-            int dbCount = users.Count();
-
-            if (dbCount == 0)
-            {
-                return false;
-            }
-            return true;
-        }
-
         public bool CreateSpaceTraveler(SpaceTravelerCreate model)
         {
             var entity =

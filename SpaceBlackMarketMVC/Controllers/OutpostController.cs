@@ -11,7 +11,7 @@ namespace SpaceBlackMarketMVC.Controllers
     
     public class OutpostController : Controller
     {
-        [Authorize(Roles = "Admin, User")]
+        [Authorize]
         // GET: Outpost
         public ActionResult Index()
         {

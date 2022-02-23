@@ -11,7 +11,7 @@ using PagedList;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
-    [Authorize(Roles = "Admin, User")]
+    [Authorize]
     public class ItemController : Controller
     {
         // GET: Item

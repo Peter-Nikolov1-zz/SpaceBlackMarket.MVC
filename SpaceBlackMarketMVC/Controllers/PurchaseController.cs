@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace SpaceBlackMarketMVC.Controllers
 {
-    [Authorize(Roles = "Admin, User")]
+    [Authorize]
     public class PurchaseController : Controller
     {
         // GET: Purchase
